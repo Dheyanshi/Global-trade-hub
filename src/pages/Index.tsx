@@ -543,7 +543,7 @@ const products = [
                 >
                   <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
                     <div className="relative">
-                      <div className="aspect-video overflow-hidden bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 p-4 flex items-center justify-center">
+                      <div className="aspect-video overflow-hidden bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 flex items-center justify-center">
                         {product.images ? (
                           <div className="grid grid-cols-3 gap-8 w-full max-w-sm">
                             {product.images.map((img, imgIndex) => (
