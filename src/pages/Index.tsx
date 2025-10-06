@@ -629,7 +629,7 @@ const products = [
         </div>
 
             {/* More Products Coming Soon */}
-        <div className="text-center">
+        <div className="text-center mt-14">
           <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 border-blue-200 dark:border-blue-800">
             <CardContent className="p-8">
               <div className="space-y-4">
