@@ -197,6 +197,56 @@ const Index = () => {
     { region: "Others", percentage: 5, color: "bg-gradient-to-r from-yellow-500 to-yellow-600" }
   ];
 
+const products = [
+  {
+    name: "Industrial Slurry Pumps",
+    partner: "Shijiazhuang Longteng Machinery Co., Ltd.",
+    image: industrialPump,
+    badge: { text: "Partner Product", color: "bg-blue-600" },
+    description: "High-performance centrifugal slurry pumps designed for mining, dredging, and industrial applications. Features wear-resistant construction with rubber lining for extended service life.",
+    priceRange: "$152 - $30,000",
+    minOrder: "1 Set",
+    features: [
+      "Heavy-duty mining and dredging applications",
+      "Rubber-lined for corrosion resistance",
+      "Centrifugal and gravel pump variants",
+      "Custom solutions available",
+    ],
+    link: "https://sjzlongteng.en.made-in-china.com/",
+  },
+  {
+    name: "HDPE Pipe Fittings",
+    partner: "Zhuji Gaohui Plastic Industry Co., Ltd.",
+    image: hdpeFittings,
+    badge: { text: "Partner Product", color: "bg-green-600" },
+    description: "Professional manufacturer of high-density polyethylene pipe fittings from DN20mm to DN1200mm. Specialized in electro-fusion and butt-fusion fittings for water supply systems.",
+    experience: "20+ Years",
+    range: "DN20-1200mm",
+    features: [
+      "Electro-fusion fittings & adapters",
+      "Butt-fusion elbows & tees",
+      "Flange plates & backing rings",
+      "End caps & reducers",
+    ],
+    link: "https://www.gh-pe.com/",
+  },
+  {
+    name: "Industrial Safety Tools",
+    partner: "Bombay Tools",
+    images: [insulatedTools, nonSparkingTools, customizedToolkits],
+    badge: { text: "Partner Product", color: "bg-orange-600" },
+    description: "Professional-grade industrial tools designed for safety in hazardous environments. Trusted by leading industries including IOCL, BPCL, HPCL, GAIL, and Reliance for their reliability and precision.",
+    industryFocus: "Safety First",
+    applications: "Hazardous Zones",
+    features: [
+      "Customized Tool Kits",
+      "Insulated Tools for electrical safety",
+      "Non Sparking Tools for ATEX zones",
+      "Industrial safety equipment",
+    ],
+    link: "https://thebombaytools.com/",
+  }
+];
   return (
     <div className="min-h-screen">
       <div className="bg-background text-foreground">
@@ -458,247 +508,151 @@ const Index = () => {
 
         {/* Products Section */}
         <section id="products" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-950/20 dark:via-blue-950/20 dark:to-indigo-950/20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="text-sm border-blue-200 text-blue-700 bg-blue-50 mb-4">Our Products</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Featured Products & Partners
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Discover our premium product lines from trusted manufacturing partners, delivering quality industrial solutions worldwide.
-              </p>
-            </div>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="text-sm border-blue-200 text-blue-700 bg-blue-50 mb-4">Our Products</Badge>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Featured Products & Partners
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Discover our premium product lines from trusted manufacturing partners, delivering quality industrial solutions worldwide.
+          </p>
+        </div>
 
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-              {/* Shijiazhuang Longteng - Slurry Pumps */}
-              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
-                <div className="relative">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={industrialPump} 
-                      alt="Industrial Slurry Pumps"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-blue-600 text-white">Partner Product</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-                        Industrial Slurry Pumps
-                      </h3>
-                      {/* <p className="text-blue-600 font-semibold mb-3">Shijiazhuang Longteng Machinery Co., Ltd.</p> */}
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        High-performance centrifugal slurry pumps designed for mining, dredging, and industrial applications. 
-                        Features wear-resistant construction with rubber lining for extended service life.
-                      </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4 py-4 border-t border-gray-100 dark:border-gray-700">
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Price Range</div>
-                        <div className="text-lg font-bold text-blue-600">$152 - $30,000</div>
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: false,
+                stopOnFocusIn: true,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {products.map((product, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                >
+                  <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
+                    <div className="relative">
+                      <div className="aspect-video overflow-hidden bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 p-4 flex items-center justify-center">
+                        {product.images ? (
+                          <div className="grid grid-cols-3 gap-8 w-full max-w-sm">
+                            {product.images.map((img, imgIndex) => (
+                              <img
+                                key={imgIndex}
+                                src={img}
+                                alt={`${product.name} ${imgIndex + 1}`}
+                                className="w-full h-16 object-contain group-hover:scale-110 transition-transform duration-500 delay-75"
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        )}
                       </div>
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Min. Order</div>
-                        <div className="text-lg font-bold text-green-600">1 Set</div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Key Features:</div>
-                      <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        <li>• Heavy-duty mining and dredging applications</li>
-                        <li>• Rubber-lined for corrosion resistance</li>
-                        <li>• Centrifugal and gravel pump variants</li>
-                        <li>• Custom solutions available</li>
-                      </ul>
-                    </div>
-
-                    <div className="flex gap-3 pt-4">
-                      <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                        Request Quote
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        className="border-blue-200 hover:bg-blue-50"
-                        onClick={() => window.open('https://sjzlongteng.en.made-in-china.com/', '_blank')}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Gaohui - HDPE Pipe Fittings */}
-              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
-                <div className="relative">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={hdpeFittings} 
-                      alt="HDPE Pipe Fittings"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-green-600 text-white">Partner Product</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-                        HDPE Pipe Fittings
-                      </h3>
-                      {/* <p className="text-green-600 font-semibold mb-3">Zhuji Gaohui Plastic Industry Co., Ltd.</p> */}
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Professional manufacturer of high-density polyethylene pipe fittings from DN20mm to DN1200mm. 
-                        Specialized in electro-fusion and butt-fusion fittings for water supply systems.
-                      </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4 py-4 border-t border-gray-100 dark:border-gray-700">
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Experience</div>
-                        <div className="text-lg font-bold text-green-600">20+ Years</div>
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Range</div>
-                        <div className="text-lg font-bold text-blue-600">DN20-1200mm</div>
+                      <div className="absolute top-4 left-4">
+                        <Badge className={`${product.badge.color} text-white`}>{product.badge.text}</Badge>
                       </div>
                     </div>
-
-                    <div className="space-y-2">
-                      <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Product Range:</div>
-                      <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        <li>• Electro-fusion fittings & adapters</li>
-                        <li>• Butt-fusion elbows & tees</li>
-                        <li>• Flange plates & backing rings</li>
-                        <li>• End caps & reducers</li>
-                      </ul>
-                    </div>
-
-                    <div className="flex gap-3 pt-4">
-                      <Button className="flex-1 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
-                        Request Quote
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        className="border-green-200 hover:bg-green-50"
-                        onClick={() => window.open('https://www.gh-pe.com/', '_blank')}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Bombay Tools - Industrial Safety Tools */}
-              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
-                <div className="relative">
-                  <div className="aspect-video overflow-hidden bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 p-4 flex items-center justify-center">
-                    <div className="grid grid-cols-3 gap-2 w-full max-w-sm">
-                      <img 
-                        src={insulatedTools} 
-                        alt="Insulated Tools"
-                        className="w-full h-16 object-contain group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <img 
-                        src={nonSparkingTools} 
-                        alt="Non Sparking Tools"
-                        className="w-full h-16 object-contain group-hover:scale-110 transition-transform duration-500 delay-75"
-                      />
-                      <img 
-                        src={customizedToolkits} 
-                        alt="Customized Tool Kits"
-                        className="w-full h-16 object-contain group-hover:scale-110 transition-transform duration-500 delay-150"
-                      />
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-orange-600 text-white">Partner Product</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-                        Industrial Safety Tools
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Professional-grade industrial tools designed for safety in hazardous environments. 
-                        Trusted by leading industries including IOCL, BPCL, HPCL, GAIL, and Reliance for their reliability and precision.
-                      </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4 py-4 border-t border-gray-100 dark:border-gray-700">
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Industry Focus</div>
-                        <div className="text-lg font-bold text-orange-600">Safety First</div>
+                    <CardContent className="p-8">
+                      <div className="space-y-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+                            {product.name}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            {product.description}
+                          </p>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4 py-4 border-t border-gray-100 dark:border-gray-700">
+                          <div>
+                            <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                              {product.priceRange ? "Price Range" : product.experience ? "Experience" : "Industry Focus"}
+                            </div>
+                            <div className="text-lg font-bold text-blue-600">
+                              {product.priceRange || product.experience || product.industryFocus}
+                            </div>
+                          </div>
+                          <div>
+                            <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                              {product.minOrder ? "Min. Order" : product.range ? "Range" : "Applications"}
+                            </div>
+                            <div className="text-lg font-bold text-green-600">
+                              {product.minOrder || product.range || product.applications}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                            {product.features.length > 4 ? "Key Features" : "Product Range"}
+                          </div>
+                          <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            {product.features.map((feature, i) => (
+                              <li key={i}>• {feature}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="flex gap-3 pt-4">
+                          <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                            Request Quote
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="border-blue-200 hover:bg-blue-50"
+                            onClick={() => window.open(product.link, "_blank")}
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                          </Button>
+                        </div>
                       </div>
-                      <div>
-                        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Applications</div>
-                        <div className="text-lg font-bold text-red-600">Hazardous Zones</div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <div className="text-sm font-semibold text-gray-700 dark:text-gray-300">Product Categories:</div>
-                      <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        <li>• Customized Tool Kits</li>
-                        <li>• Insulated Tools for electrical safety</li>
-                        <li>• Non Sparking Tools for ATEX zones</li>
-                        <li>• Industrial safety equipment</li>
-                      </ul>
-                    </div>
-
-                    <div className="flex gap-3 pt-4">
-                      <Button className="flex-1 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700">
-                        Request Quote
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        className="border-orange-200 hover:bg-orange-50"
-                        onClick={() => window.open('https://thebombaytools.com/', '_blank')}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 dark:bg-gray-800/90 border-blue-200 hover:bg-blue-50 dark:hover:bg-blue-900/20 shadow-lg" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white/90 dark:bg-gray-800/90 border-blue-200 hover:bg-blue-50 dark:hover:bg-blue-900/20 shadow-lg" />
+          </Carousel>
+        </div>
 
             {/* More Products Coming Soon */}
-            <div className="text-center">
-              <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 border-blue-200 dark:border-blue-800">
-                <CardContent className="p-8">
-                  <div className="space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto">
-                      <Factory className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      More Products Coming Soon
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      We're continuously expanding our product portfolio with new manufacturing partners and innovative solutions. 
-                      Stay tuned for exciting additions to our catalog.
-                    </p>
-                    <Button variant="outline" className="mt-4 border-blue-200 hover:bg-blue-50">
-                      <span>Notify Me of New Products</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <div className="text-center">
+          <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 border-blue-200 dark:border-blue-800">
+            <CardContent className="p-8">
+              <div className="space-y-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto">
+                  <Factory className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  More Products Coming Soon
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  We're continuously expanding our product portfolio with new manufacturing partners and innovative solutions. 
+                  Stay tuned for exciting additions to our catalog.
+                </p>
+                <Button variant="outline" className="mt-4 border-blue-200 hover:bg-blue-50">
+                  <span>Notify Me of New Products</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
 
         {/* Hierarchical Products Catalog */}
         <HierarchicalProducts />
