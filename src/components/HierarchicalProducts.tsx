@@ -16,6 +16,11 @@ import zjZgbSlurryPumpImage from '@/assets/zj-zgb-slurry-pump.jpg';
 import highPressurePumpImage from '@/assets/high-pressure-pump.jpg';
 import frothPumpImage from '@/assets/froth-pump.jpg';
 import pumpPartsImage from '@/assets/pump-parts.jpg';
+import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpg';
+import shrRubberLinedPumpImage from '@/assets/shr-rubber-lined-pump.jpg';
+import slSmSlurryPumpImage from '@/assets/sl-sm-slurry-pump.jpg';
+import shhSlurryPumpImage from '@/assets/shh-slurry-pump.jpg';
+import wnPumpImage from '@/assets/wn-pump.jpg';
 import customizedToolkitsImage from '@/assets/customized-toolkits.png';
 import insulatedToolsImage from '@/assets/insulated-tools.png';
 import nonSparkingToolsImage from '@/assets/non-sparking-tools.png';
@@ -43,7 +48,7 @@ const productData: ProductCategory[] = [
     subcategories: [
       {
         name: "Horizontal Slurry Pumps",
-        image: horizontalSlurryPumpImage,
+        image: shhSlurryPumpImage,
         items: ["SH Metal Lined Slurry Pump", "SHR Rubber Lined Slurry Pump", "SL/SM Slurry Pump", "SHH Slurry Pump"]
       },
       {
@@ -53,7 +58,7 @@ const productData: ProductCategory[] = [
       },
       {
         name: "Centrifugal Slurry Pumps",
-        image: centrifugalSlurryPumpImage
+        image: shMetalLinedPumpImage
       },
       {
         name: "Gravel Dredging Pumps",
