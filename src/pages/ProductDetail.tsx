@@ -25,6 +25,21 @@ import pumpPartsImage from '@/assets/pump-parts.jpg';
 import customizedToolkitsImage from '@/assets/customized-toolkits.png';
 import insulatedToolsImage from '@/assets/insulated-tools.png';
 import nonSparkingToolsImage from '@/assets/non-sparking-tools.png';
+import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpg';
+import shrRubberLinedPumpImage from '@/assets/shr-rubber-lined-pump.jpg';
+import slSmSlurryPumpImage from '@/assets/sl-sm-slurry-pump.jpg';
+import shhSlurryPumpImage from '@/assets/shh-slurry-pump.jpg';
+import wnPumpImage from '@/assets/wn-pump.jpg';
+import svSvrVerticalPumpImage from '@/assets/sv-svr-vertical-slurry-pump.jpg_560xaf.jpg';
+import zjlVerticalPumpImage from '@/assets/zjl-slurry-pump.jpg_560xaf.jpg';
+import gravelPumpImage from '@/assets/gravel-pump.jpg_560xaf.jpg';
+import zjslurryPumpImage from '@/assets/zj-slurry-pump.jpg_560xaf.jpg';
+import zgbslurryPumpImage from '@/assets/zgb-slurry-pump.jpg_560xaf.jpg';
+import sfPump from '@/assets/sf-pump.jpg_560xaf.jpg';
+import shfPump from '@/assets/shf-pump.jpg_560xaf.jpg';
+import puParts from '@/assets/pu-parts.jpg_560xaf.jpg';
+import rubberParts from '@/assets/rubber-parts.jpg_560xaf.jpg';
+import metalParts from '@/assets/metal-parts.jpg_560xaf.jpg';
 
 const ProductDetail = () => {
   const location = useLocation();
@@ -33,13 +48,47 @@ const ProductDetail = () => {
   // Parse the pathname to get product information
   const pathParts = location.pathname.replace('/product/', '').split('/');
   const [categorySlug, subcategorySlug, productSlug] = pathParts;
-
+debugger
   // Product data mapping
-  const getProductImage = (categorySlug: string, subcategorySlug: string) => {
-    const imageMap: { [key: string]: string } = {
+  const getProductImage = (categorySlug: string, subcategorySlug: string, productSlug: string) => {
+    // First check for specific product images
+    const productImageMap: { [key: string]: string } = {
+      // Horizontal Slurry Pumps
+      'sh-metal-lined-slurry-pump': shMetalLinedPumpImage,
+      'shr-rubber-lined-slurry-pump': shrRubberLinedPumpImage,
+      'slsm-slurry-pump': slSmSlurryPumpImage,
+      'shh-slurry-pump': shhSlurryPumpImage,
+      
+      // Vertical Sump Pumps
+      'sv-svr-vertical-slurry-pump': svSvrVerticalPumpImage,
+      'zjl-vertical-sump-pump': zjlVerticalPumpImage,
+      
+      // Gravel Dredging Pumps
+      'gravel-pump': gravelPumpImage,
+      'wn-pump': wnPumpImage,
+      // 'zj-slurry-pump': zjslurryPumpImage,
+      // 'zgb-slurry-pump': zgbslurryPumpImage
+      'sf-pump': sfPump,
+      'shf-pump': shfPump,
+      'metal-parts':metalParts,
+      'rubber-parts':rubberParts,
+      'pu-parts': puParts
+    };
+
+    // If there's a specific product image, return it
+    if (productSlug && productImageMap[productSlug]) {
+      return productImageMap[productSlug];
+    }
+
+    // Otherwise, fall back to subcategory/category images
+    const categoryImageMap: { [key: string]: string } = {
       'slurry-pumps-horizontal-slurry-pumps': horizontalSlurryPumpImage,
       'slurry-pumps-vertical-sump-pumps': verticalSlurryPumpImage,
-      'slurry-pumps-centrifugal-slurry-pumps': centrifugalSlurryPumpImage,
+      'slurry-pumps-sv-svr-vertical-slurry-pump': svSvrVerticalPumpImage,
+      'slurry-pumps-zjl-vertical-sump-pump': zjlVerticalPumpImage,
+      'slurry-pumps-gravel-pump': gravelPumpImage,
+      'slurry-pumps-wn-pump': wnPumpImage,
+      'slurry-pumps-centrifugal-slurry-pumps': shMetalLinedPumpImage,
       'slurry-pumps-gravel-dredging-pumps': gravelDredgingPumpImage,
       'slurry-pumps-zjzgb-slurry-pumps': zjZgbSlurryPumpImage,
       'slurry-pumps-shpshpp-high-pressure-pumps': highPressurePumpImage,
@@ -53,11 +102,15 @@ const ProductDetail = () => {
       'industrial-tools-customised-tool-kits': customizedToolkitsImage,
       'industrial-tools-insulated-tools': insulatedToolsImage,
       'industrial-tools-non-sparking-tools': nonSparkingToolsImage,
+      'slurry-pumps-sh-metal-lined-slurry-pump': shMetalLinedPumpImage,
+      'slurry-pumps-shr-rubber-lined-slurry-pump': shrRubberLinedPumpImage,
+      'slurry-pumps-slsm-slurry-pump': slSmSlurryPumpImage,
+      'slurry-pumps-shh-slurry-pump': shhSlurryPumpImage,
     };
     
-    return imageMap[`${categorySlug}-${subcategorySlug}`] || slurryPumpsImage;
+    return categoryImageMap[`${categorySlug}-${subcategorySlug}`] || slurryPumpsImage;
   };
-
+debugger
   // Convert slug back to readable text
   const slugToText = (slug: string) => {
     return slug.split('-').map(word => 
@@ -68,19 +121,19 @@ const ProductDetail = () => {
   const categoryName = slugToText(categorySlug);
   const subcategoryName = slugToText(subcategorySlug);
   const productName = slugToText(productSlug);
-  const productImage = getProductImage(categorySlug, subcategorySlug);
-
+  const productImage = getProductImage(categorySlug, subcategorySlug, productSlug);
+debugger
   // Generate product specifications based on category
   const getProductSpecs = (categorySlug: string, productName: string) => {
     const specs: { [key: string]: any } = {
       'slurry-pumps': {
-        'Material': 'High Chrome Alloy, Rubber Lined',
-        'Capacity': '10-5000 m³/h',
-        'Head': '8-70 meters',
-        'Efficiency': 'Up to 85%',
-        'Temperature': '-20°C to +80°C',
-        'Suction Size': '25mm - 500mm',
-        'Discharge Size': '25mm - 450mm'
+        'Material': 'High Chrome Alloy / Rubber Lined',
+        'Capacity': 'Up to 5,000 m³/h',
+        'Head': 'Up to 73 meters',
+        'Discharge Size': '1" to 18"',
+        'Working Pressure': 'Up to 2100 kPa',
+        'Handing Solids': 'Up to 254mm',
+        'Temperature': '-20°C to +80°C'
       },
       'hdpe-pipe-fittings': {
         'Material': 'PE100 / PE80',
@@ -324,6 +377,5 @@ const ProductDetail = () => {
       />
     </div>
   );
-};
-
+}
 export default ProductDetail;
