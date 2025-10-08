@@ -40,6 +40,27 @@ import shfPump from '@/assets/shf-pump.jpg_560xaf.jpg';
 import puParts from '@/assets/pu-parts.jpg_560xaf.jpg';
 import rubberParts from '@/assets/rubber-parts.jpg_560xaf.jpg';
 import metalParts from '@/assets/metal-parts.jpg_560xaf.jpg';
+import efEqualCouplerImage from '@/assets/hdpe-pipe-fittings/ef-equal-coupler.jpg';
+import efEndCapImage from '@/assets/hdpe-pipe-fittings/ef-end-cap.jpg';
+import ef45ElbowImage from '@/assets/hdpe-pipe-fittings/ef-45-elbow.jpg';
+import ef90ElbowImage from '@/assets/hdpe-pipe-fittings/ef-90-elbow.jpg';
+import efEqualTeeImage from '@/assets/hdpe-pipe-fittings/ef-equal-tee.jpg';
+import efreducingTeeImage from '@/assets/hdpe-pipe-fittings/ef-rreducing-tee.jpg';
+import efReducerImage from '@/assets/hdpe-pipe-fittings/ef-reducer.jpg';
+import efStubEndImage from '@/assets/hdpe-pipe-fittings/ef-stub-end.jpg';
+// import efFemaleThreadImage from '@/assets/ef-female-thread.jpg';
+// import efMaleThreadImage from '@/assets/ef-male-thread.jpg';
+// import efCrossTeeImage from '@/assets/hdpe-pipe-fittings/ef-cross-tee.jpg';
+
+import bfEndCapImage from '@/assets/hdpe-pipe-fittings/bf-end-cap.jpg';
+// import bf225ElbowImage from '@/assets/hdpe-pipe-fittings/';
+import bf45ElbowImage from '@/assets/hdpe-pipe-fittings/bf-45-elbow.jpg';
+import bf90ElbowImage from '@/assets/hdpe-pipe-fittings/bf-90-elbow.jpg';
+import bfFlangeImage from '@/assets/hdpe-pipe-fittings/bf-flange.jpg';
+import bfEqualTeeImage from '@/assets/hdpe-pipe-fittings/bf-equal-tee.jpg';
+import bfReducingTeeImage from '@/assets/hdpe-pipe-fittings/bf-reducing-tee.jpg';
+import bfReducingCouplingImage from '@/assets/hdpe-pipe-fittings/bf-reducing-coupling.jpg';
+import bfReducingCrossImage from '@/assets/hdpe-pipe-fittings/bf-reducing-cross.jpg';
 
 const ProductDetail = () => {
   const location = useLocation();
@@ -66,13 +87,34 @@ debugger
       // Gravel Dredging Pumps
       'gravel-pump': gravelPumpImage,
       'wn-pump': wnPumpImage,
-      // 'zj-slurry-pump': zjslurryPumpImage,
-      // 'zgb-slurry-pump': zgbslurryPumpImage
+      'zj-slurry-pump': zjslurryPumpImage,
+      'zgb-slurry-pump': zgbslurryPumpImage,
       'sf-pump': sfPump,
       'shf-pump': shfPump,
       'metal-parts':metalParts,
       'rubber-parts':rubberParts,
-      'pu-parts': puParts
+      'pu-parts': puParts,
+      'ef-equal-coupler': efEqualCouplerImage,
+      'ef-end-cup': efEndCapImage,
+      'ef-45elbow': ef45ElbowImage,
+      'ef-90elbow': ef90ElbowImage,
+      'ef-equal-tee': efEqualTeeImage,
+      'ef-reducing-tee': efreducingTeeImage,
+      'ef-reducer': efReducerImage,
+      'ef-stub-end': efStubEndImage,
+      // 'ef-female-thread': efFemaleThreadImage,
+      // 'ef-male-thread': efMaleThreadImage,
+      // 'ef-cross-tee': efCrossTeeImage,
+
+      'butt-fusion-end-cap': bfEndCapImage,
+      // 'bf-22-5-elbow': bf225ElbowImage,
+      'butt-fusion-45elbow': bf45ElbowImage,
+      'butt-fusion-90elbow': bf90ElbowImage,
+      'butt-fusion-flange': bfFlangeImage,
+      'butt-fusion-equal-tee': bfEqualTeeImage,
+      'butt-fusion-reducing-tee': bfReducingTeeImage,
+      'butt-fusion-reducing-coupling': bfReducingCouplingImage,
+      'butt-fusion-reducing-cross': bfReducingCrossImage,
     };
 
     // If there's a specific product image, return it
@@ -86,6 +128,7 @@ debugger
       'slurry-pumps-vertical-sump-pumps': verticalSlurryPumpImage,
       'slurry-pumps-sv-svr-vertical-slurry-pump': svSvrVerticalPumpImage,
       'slurry-pumps-zjl-vertical-sump-pump': zjlVerticalPumpImage,
+      'slurry-pumps-zj': zjlVerticalPumpImage,
       'slurry-pumps-gravel-pump': gravelPumpImage,
       'slurry-pumps-wn-pump': wnPumpImage,
       'slurry-pumps-centrifugal-slurry-pumps': shMetalLinedPumpImage,
@@ -101,11 +144,7 @@ debugger
       'hdpe-valves-ball-valve': hdpeBallValveImage,
       'industrial-tools-customised-tool-kits': customizedToolkitsImage,
       'industrial-tools-insulated-tools': insulatedToolsImage,
-      'industrial-tools-non-sparking-tools': nonSparkingToolsImage,
-      'slurry-pumps-sh-metal-lined-slurry-pump': shMetalLinedPumpImage,
-      'slurry-pumps-shr-rubber-lined-slurry-pump': shrRubberLinedPumpImage,
-      'slurry-pumps-slsm-slurry-pump': slSmSlurryPumpImage,
-      'slurry-pumps-shh-slurry-pump': shhSlurryPumpImage,
+      'industrial-tools-non-sparking-tools': nonSparkingToolsImage
     };
     
     return categoryImageMap[`${categorySlug}-${subcategorySlug}`] || slurryPumpsImage;
