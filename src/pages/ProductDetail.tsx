@@ -25,21 +25,21 @@ import pumpPartsImage from '@/assets/pump-parts.jpg';
 import customizedToolkitsImage from '@/assets/customized-toolkits.png';
 import insulatedToolsImage from '@/assets/insulated-tools.png';
 import nonSparkingToolsImage from '@/assets/non-sparking-tools.png';
-import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpg';
+import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpeg';
 import shrRubberLinedPumpImage from '@/assets/shr-rubber-lined-pump.jpg';
 import slSmSlurryPumpImage from '@/assets/sl-sm-slurry-pump.jpg';
 import shhSlurryPumpImage from '@/assets/shh-slurry-pump.jpg';
 import wnPumpImage from '@/assets/wn-pump.jpg';
-import svSvrVerticalPumpImage from '@/assets/sv-svr-vertical-slurry-pump.jpg_560xaf.jpg';
+import svSvrVerticalPumpImage from '@/assets/sv-svr-vertical-slurry-pump.jpg_560xaf.jpeg';
 import zjlVerticalPumpImage from '@/assets/zjl-slurry-pump.jpg_560xaf.jpg';
 import gravelPumpImage from '@/assets/gravel-pump.jpg_560xaf.jpg';
 import zjslurryPumpImage from '@/assets/zj-slurry-pump.jpg_560xaf.jpg';
-import zgbslurryPumpImage from '@/assets/zgb-slurry-pump.jpg_560xaf.jpg';
+import zgbslurryPumpImage from '@/assets/zgb-slurry-pump.jpg_560xaf.jpeg';
 import sfPump from '@/assets/sf-pump.jpg_560xaf.jpg';
 import shfPump from '@/assets/shf-pump.jpg_560xaf.jpg';
-import puParts from '@/assets/pu-parts.jpg_560xaf.jpg';
-import rubberParts from '@/assets/rubber-parts.jpg_560xaf.jpg';
-import metalParts from '@/assets/metal-parts.jpg_560xaf.jpg';
+import puParts from '@/assets/pu-parts.jpg_560xaf.jpeg';
+import rubberParts from '@/assets/rubber-parts.jpg_560xaf.jpeg';
+import metalParts from '@/assets/metal-parts.jpg_560xaf.jpeg';
 import efEqualCouplerImage from '@/assets/hdpe-pipe-fittings/ef-equal-coupler.jpg';
 import efEndCapImage from '@/assets/hdpe-pipe-fittings/ef-end-cap.jpg';
 import ef45ElbowImage from '@/assets/hdpe-pipe-fittings/ef-45-elbow.jpg';
@@ -61,6 +61,58 @@ import bfEqualTeeImage from '@/assets/hdpe-pipe-fittings/bf-equal-tee.jpg';
 import bfReducingTeeImage from '@/assets/hdpe-pipe-fittings/bf-reducing-tee.jpg';
 import bfReducingCouplingImage from '@/assets/hdpe-pipe-fittings/bf-reducing-coupling.jpg';
 import bfReducingCrossImage from '@/assets/hdpe-pipe-fittings/bf-reducing-cross.jpg';
+interface SubcategoryDetails {
+  name: string;
+  description: string;
+  image: string;
+  features: string[];
+  specifications: {
+    [key: string]: string;
+  };
+}
+
+interface ProductDetails {
+  description: string;
+  features: string[];
+}
+
+// Add this const before the ProductDetail component
+const productDetailsMap: { [key: string]: ProductDetails } = {
+  'sh-metal-lined-slurry-pump': {
+    description: "Metal lined centrifugal horizontal slurry pumps are also called heavy duty slurry pumps. Metal lined slurry pumps are used to pump the highly abrasive and high density slurry. Under the allowable pressure, the pumps of this type also can be installed in multistage series. Our final goal is to let our customers have the lowest total cost to gain the best slurry pumps and parts and services. We can give you the best deal on equipment, the highest quality spare, and replacement slurry pump parts and providing unmatched engineering support from a company that only focuses on slurry pumps. The metal lined slurry pumps are designed for heavy duty industrial applications, to handle the most harsh slurries. Wear resistant cast alloys are used for slurry pump liners and impellers where conditions are not suitable for rubber, such as with coarse or sharp edged particles, or on duties having high impeller peripheral velocities or high operating temperatures.",
+    features: [
+      "Modular design, easy to maintain with replaceable spare parts;",
+      "Wide options of impellers of standard 5 vanes , 4 vanes high efficiency and 2 vanes non-clogging;",
+      "27% Chrome alloy hard metal, thick rubber and polyurethane pump lining are available and can be replaced with each other;",
+      "Standard ductile iron pump body, can withstand higher working pressure;",
+      "Famous brand bearing components can improve reliability, prolong bearing life and reduce lubrication cost;",
+      "Reliable shaft seal, packing seal, expeller seal, or mechanical seal are available;"
+    ]
+  },
+  'shr-rubber-lined-slurry-pump': {
+    description: "The SHR Rubber Lined Slurry Pump is specifically engineered for corrosive and mildly abrasive slurry applications. The natural rubber lining provides excellent resistance to corrosion and moderate abrasion.",
+    features: [
+      "Natural rubber lining",
+      "Corrosion resistant design",
+      "Heavy-duty shaft assembly",
+      "Extended service life",
+      "Low maintenance requirements",
+      "Excellent chemical resistance"
+    ]
+  },
+  'slsm-slurry-pump': {
+    description: "The SLSM Slurry Pump series offers a versatile solution for medium-duty slurry applications. Combines efficiency with durability for optimal performance in various industrial processes.",
+    features: [
+      "Medium-duty design",
+      "Balanced impeller design",
+      "Multiple material options",
+      "Standardized parts",
+      "Easy maintenance access",
+      "Efficient operation"
+    ]
+  }
+  // Add more products as needed
+};
 
 const ProductDetail = () => {
   const location = useLocation();
@@ -317,24 +369,17 @@ debugger
 
               <div className="prose text-muted-foreground">
                 <p className="text-sm md:text-base">
-                  High-quality industrial equipment manufactured to international standards. 
-                  This product is part of our {categoryName.toLowerCase()} range, specifically 
-                  designed for demanding industrial applications with superior performance and reliability.
+                  {productDetailsMap[productSlug] ? (
+                    productDetailsMap[productSlug].description
+                  ) : (
+                    `High-quality industrial equipment manufactured to international standards. 
+                    This product is part of our ${categoryName.toLowerCase()} range, specifically 
+                    designed for demanding industrial applications with superior performance and reliability.`
+                  )}
                 </p>
               </div>
 
-              {/* Key Features */}
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Key Features</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              
 
               {/* Action Buttons */}
               <div className="flex flex-col gap-3">
@@ -365,9 +410,21 @@ debugger
               </div>
             </div>
           </div>
+            {/* Key Features */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Key Features</h3>
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> */}
+                  {(productDetailsMap[productSlug]?.features || features).map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2 mb-2">
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </div>
+                  ))}
+                {/* </div> */}
+              </div>
 
           {/* Specifications */}
-          <div className="mt-12 md:mt-16">
+          {/* <div className="mt-12 md:mt-16">
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg md:text-xl">Technical Specifications</CardTitle>
@@ -386,7 +443,7 @@ debugger
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
 
           {/* Contact Section */}
           <div className="mt-12 md:mt-16">

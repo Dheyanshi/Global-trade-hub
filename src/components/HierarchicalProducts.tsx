@@ -16,7 +16,7 @@ import zjZgbSlurryPumpImage from '@/assets/zj-zgb-slurry-pump.jpg';
 import highPressurePumpImage from '@/assets/high-pressure-pump.jpg';
 import frothPumpImage from '@/assets/froth-pump.jpg';
 import pumpPartsImage from '@/assets/pump-parts.jpg';
-import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpg';
+import shMetalLinedPumpImage from '@/assets/sh-metal-lined-pump.jpeg';
 import shrRubberLinedPumpImage from '@/assets/shr-rubber-lined-pump.jpg';
 import slSmSlurryPumpImage from '@/assets/sl-sm-slurry-pump.jpg';
 import shhSlurryPumpImage from '@/assets/shh-slurry-pump.jpg';
@@ -290,15 +290,15 @@ const HierarchicalProducts: React.FC = () => {
                                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
                                    {subcategory.items!.map((item, itemIndex) => (
                                      <Link 
-                                       key={itemIndex}
+      key={itemIndex}
                                        to={createProductSlug(category.name, subcategory.name, item)}
-                                       className="flex items-center space-x-2 p-2 md:p-3 rounded-lg bg-background/80 hover:bg-primary/5 border border-border/20 hover:border-primary/30 transition-all duration-200 group/item cursor-pointer"
-                                     >
-                                       <div className="w-1.5 h-1.5 bg-accent rounded-full group-hover/item:bg-primary transition-colors flex-shrink-0" />
-                                       <span className="text-xs md:text-sm text-foreground group-hover/item:text-primary transition-colors break-words">
+      className="flex items-center space-x-2 p-2 md:p-3 rounded-lg bg-background/80 hover:bg-primary/5 border border-border/20 hover:border-primary/30 transition-all duration-200 group/item cursor-pointer"
+    >
+      <div className="w-1.5 h-1.5 bg-accent rounded-full group-hover/item:bg-primary transition-colors flex-shrink-0" />
+        <span className="text-xs md:text-sm text-foreground group-hover/item:text-primary transition-colors break-words">
                                          {item}
-                                       </span>
-                                     </Link>
+            </span>
+    </Link>
                                    ))}
                                  </div>
                               </div>
