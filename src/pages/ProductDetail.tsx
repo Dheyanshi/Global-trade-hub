@@ -31,12 +31,12 @@ import slSmSlurryPumpImage from '@/assets/sl-sm-slurry-pump.jpg';
 import shhSlurryPumpImage from '@/assets/shh-slurry-pump.jpg';
 import wnPumpImage from '@/assets/wn-pump.jpg';
 import svSvrVerticalPumpImage from '@/assets/sv-svr-vertical-slurry-pump.jpg_560xaf.jpeg';
-import zjlVerticalPumpImage from '@/assets/zjl-slurry-pump.jpg_560xaf.jpg';
+import zjlVerticalPumpImage from '@/assets/zjl-slurry-pump.jpg_560xaf.jpeg';
 import gravelPumpImage from '@/assets/gravel-pump.jpg_560xaf.jpg';
 import zjslurryPumpImage from '@/assets/zj-slurry-pump.jpg_560xaf.jpg';
 import zgbslurryPumpImage from '@/assets/zgb-slurry-pump.jpg_560xaf.jpeg';
-import sfPump from '@/assets/sf-pump.jpg_560xaf.jpg';
-import shfPump from '@/assets/shf-pump.jpg_560xaf.jpg';
+import sfPump from '@/assets/sf-pump.jpg_560xaf.jpeg';
+import shfPump from '@/assets/shf-pump.jpg_560xaf.jpeg';
 import puParts from '@/assets/pu-parts.jpg_560xaf.jpeg';
 import rubberParts from '@/assets/rubber-parts.jpg_560xaf.jpeg';
 import metalParts from '@/assets/metal-parts.jpg_560xaf.jpeg';
@@ -74,12 +74,31 @@ interface SubcategoryDetails {
 interface ProductDetails {
   description: string;
   features: string[];
+  specifications?: {
+    discharge_size?: string;
+    capacity?: string;
+    head?: string;
+    pressure?: string;
+    category?: string;
+    keywords?: string;
+  };
 }
 
 // Add this const before the ProductDetail component
 const productDetailsMap: { [key: string]: ProductDetails } = {
   'sh-metal-lined-slurry-pump': {
-    description: "Metal lined centrifugal horizontal slurry pumps are also called heavy duty slurry pumps. Metal lined slurry pumps are used to pump the highly abrasive and high density slurry. Under the allowable pressure, the pumps of this type also can be installed in multistage series. Our final goal is to let our customers have the lowest total cost to gain the best slurry pumps and parts and services. We can give you the best deal on equipment, the highest quality spare, and replacement slurry pump parts and providing unmatched engineering support from a company that only focuses on slurry pumps. The metal lined slurry pumps are designed for heavy duty industrial applications, to handle the most harsh slurries. Wear resistant cast alloys are used for slurry pump liners and impellers where conditions are not suitable for rubber, such as with coarse or sharp edged particles, or on duties having high impeller peripheral velocities or high operating temperatures.",
+    description: [
+      "Metal lined centrifugal horizontal slurry pumps are classified as heavy duty slurry pumps.",
+      "Specifically designed for pumping highly abrasive and high-density slurry materials.",
+      "Can be installed in multistage series under allowable pressure conditions.",
+      "Optimized for lowest total cost of ownership while maintaining highest quality standards.",
+      "Provides comprehensive solution including equipment, spare parts, and engineering support.",
+      "Engineered for heavy-duty industrial applications and harsh slurry environments.",
+      "Features wear-resistant cast alloys for pump liners and impellers.",
+      "Ideal for applications with coarse or sharp-edged particles.",
+      "Suitable for high impeller peripheral velocities and high operating temperatures.",
+      "Backed by specialized slurry pump expertise and technical support."
+    ],
     features: [
       "Modular design, easy to maintain with replaceable spare parts;",
       "Wide options of impellers of standard 5 vanes , 4 vanes high efficiency and 2 vanes non-clogging;",
@@ -87,7 +106,13 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       "Standard ductile iron pump body, can withstand higher working pressure;",
       "Famous brand bearing components can improve reliability, prolong bearing life and reduce lubrication cost;",
       "Reliable shaft seal, packing seal, expeller seal, or mechanical seal are available;"
-    ]
+    ],
+    specifications: {
+      discharge_size: "1\" to 18\"",
+      capacity: "5,000 m³/h",
+      head: "73 m",
+      pressure: "2100 kPa"
+    }
   },
   'shr-rubber-lined-slurry-pump': {
     description: "The SHR Rubber Lined Slurry Pump is specifically engineered for corrosive and mildly abrasive slurry applications. The natural rubber lining provides excellent resistance to corrosion and moderate abrasion.",
@@ -213,18 +238,15 @@ debugger
   const subcategoryName = slugToText(subcategorySlug);
   const productName = slugToText(productSlug);
   const productImage = getProductImage(categorySlug, subcategorySlug, productSlug);
-debugger
+
   // Generate product specifications based on category
   const getProductSpecs = (categorySlug: string, productName: string) => {
     const specs: { [key: string]: any } = {
       'slurry-pumps': {
-        'Material': 'High Chrome Alloy / Rubber Lined',
         'Capacity': 'Up to 5,000 m³/h',
-        'Head': 'Up to 73 meters',
+        'Head to': 'Up to 73 meters',
         'Discharge Size': '1" to 18"',
-        'Working Pressure': 'Up to 2100 kPa',
-        'Handing Solids': 'Up to 254mm',
-        'Temperature': '-20°C to +80°C'
+        'Pressure to': 'Up to 2100 kPa'
       },
       'hdpe-pipe-fittings': {
         'Material': 'PE100 / PE80',
@@ -332,23 +354,28 @@ debugger
           </div>
         </div>
       </div>
-
       {/* Product Details */}
       <section className="py-8 md:py-12">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Product Image */}
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted/20">
+            <div className="relative group">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-muted/20 transition-all duration-300 group-hover:shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <img 
                   src={productImage} 
                   alt={productName}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute top-4 right-4">
-                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+              <div className="absolute top-4 right-4 space-y-2">
+                <Badge variant="secondary" className="bg-primary/90 text-white border-none shadow-lg">
                   In Stock
+                </Badge>
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <Badge variant="secondary" className="bg-background/95 backdrop-blur-sm text-foreground w-full justify-center py-2">
+                  Click to zoom
                 </Badge>
               </div>
             </div>
@@ -362,13 +389,46 @@ debugger
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   {productName}
                 </h1>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg">
                   {subcategoryName}
                 </p>
               </div>
 
-              <div className="prose text-muted-foreground">
-                <p className="text-sm md:text-base">
+              {/* <div className="prose text-muted-foreground"> */}
+                <div className="mt-12 md:mt-16">
+            <Card className="bg-gradient-to-br from-background via-muted/50 to-background border-primary/10">
+  <CardHeader className="space-y-1">
+    <div className="flex items-center space-x-2">
+      <Package className="h-5 w-5 text-primary" />
+      <CardTitle>Technical Specifications</CardTitle>
+    </div>
+    <CardDescription>
+      Detailed specifications for {productName}
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {productDetailsMap[productSlug]?.specifications
+        ? Object.entries(productDetailsMap[productSlug].specifications).map(([key, value]) => (
+          <div key={key} className="p-3 rounded-lg bg-muted/30 border border-border/50 space-y-1 hover:bg-muted/40 transition-colors">
+            <div className="text-sm font-medium text-primary">
+              {key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+            </div>
+            <div className="text-base font-medium">{value}</div>
+          </div>
+        ))
+        : Object.entries(specifications).map(([key, value]) => (
+          <div key={key} className="p-3 rounded-lg bg-muted/30 border border-border/50 space-y-1 hover:bg-muted/40 transition-colors">
+            <div className="text-sm font-medium text-primary">{key}</div>
+            <div className="text-base font-medium">{value}</div>
+          </div>
+        ))
+      }
+    </div>
+  </CardContent>
+</Card>
+          </div>
+                {/* <p className="text-sm md:text-base">
                   {productDetailsMap[productSlug] ? (
                     productDetailsMap[productSlug].description
                   ) : (
@@ -377,7 +437,7 @@ debugger
                     designed for demanding industrial applications with superior performance and reliability.`
                   )}
                 </p>
-              </div>
+              </div> */}
 
               
 
@@ -410,40 +470,46 @@ debugger
               </div>
             </div>
           </div>
-            {/* Key Features */}
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Key Features</h3>
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> */}
-                  {(productDetailsMap[productSlug]?.features || features).map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-2 mb-2">
-                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                {/* </div> */}
+          <div className="prose text-muted-foreground">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold">Product Description</h3>
+                  <div className="space-y-2">
+                    {Array.isArray(productDetailsMap[productSlug]?.description) ? (
+                      productDetailsMap[productSlug].description.map((point, index) => (
+                        <div key={index} className="flex items-start space-x-3">
+                          <div className="w-2 h-2 mt-2 bg-primary rounded-full flex-shrink-0" />
+                          <p className="text-sm md:text-base text-muted-foreground">{point}</p>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-sm md:text-base">
+                        High-quality industrial equipment manufactured to international standards. 
+                        This product is part of our {categoryName.toLowerCase()} range, specifically 
+                        designed for demanding industrial applications with superior performance and reliability.
+                      </p>
+                    )}
+                  </div>
+                </div>
               </div>
+            {/* Key Features */}
+              <div className="mt-8 space-y-6">
+  <div className="flex items-center space-x-2">
+    <Package className="h-5 w-5 text-primary" />
+    <h3 className="text-xl font-semibold">Key Features</h3>
+  </div>
+  
+  <div className="grid sm:grid-cols-2 gap-4">
+    {(productDetailsMap[productSlug]?.features || features).map((feature, index) => (
+      <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-muted/30 border border-border/50 hover:bg-muted/40 transition-colors">
+        <div className="w-2 h-2 mt-2 bg-primary rounded-full flex-shrink-0" />
+        <span className="text-sm text-muted-foreground">{feature}</span>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* Specifications */}
-          {/* <div className="mt-12 md:mt-16">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg md:text-xl">Technical Specifications</CardTitle>
-                <CardDescription>
-                  Detailed technical information for {productName}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                  {Object.entries(specifications).map(([key, value]) => (
-                    <div key={key} className="space-y-1">
-                      <div className="text-sm font-medium text-muted-foreground">{key}</div>
-                      <div className="text-sm md:text-base text-foreground">{String(value)}</div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div> */}
+          
 
           {/* Contact Section */}
           <div className="mt-12 md:mt-16">
