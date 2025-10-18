@@ -33,7 +33,7 @@ import wnPumpImage from '@/assets/wn-pump.jpg';
 import svSvrVerticalPumpImage from '@/assets/sv-svr-vertical-slurry-pump.jpg_560xaf.jpeg';
 import zjlVerticalPumpImage from '@/assets/zjl-slurry-pump.jpg_560xaf.jpeg';
 import gravelPumpImage from '@/assets/gravel-pump.jpg_560xaf.jpg';
-import zjslurryPumpImage from '@/assets/zj-slurry-pump.jpg_560xaf.jpg';
+import zjslurryPumpImage from '@/assets/zj-slurry-pump.jpg_560xaf.jpeg';
 import zgbslurryPumpImage from '@/assets/zgb-slurry-pump.jpg_560xaf.jpeg';
 import sfPump from '@/assets/sf-pump.jpg_560xaf.jpeg';
 import shfPump from '@/assets/shf-pump.jpg_560xaf.jpeg';
