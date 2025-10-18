@@ -65,24 +65,35 @@ interface SubcategoryDetails {
   name: string;
   description: string;
   image: string;
-  features: string[];
+  features?: string[];
   specifications: {
     [key: string]: string;
   };
 }
 
 interface ProductDetails {
-  description: string;
-  features: string[];
+  description?: string | string[];
+  features?: string[];
   specifications?: {
-    discharge_size?: string;
-    capacity?: string;
-    head?: string;
-    pressure?: string;
-    category?: string;
-    keywords?: string;
+    [key: string]: string;  // Allow any specification key-value pairs
   };
 }
+
+const productNameMap: { [key: string]: string } = {
+  'sh-metal-lined-slurry-pump': 'SH Metal Lined Slurry Pump',
+  'shr-rubber-lined-slurry-pump': 'SHR Rubber Lined Slurry Pump',
+  'slsm-slurry-pump': 'SL/SM Slurry Pump',
+  'shh-slurry-pump': 'SHH Slurry Pump',
+  'sv-svr-vertical-slurry-pump': 'SV/SVR Vertical sump pumps',
+  'zjl-vertical-sump-pump': 'ZJL Vertical Sump Pumps',
+  'gravel-pump': 'Gravel Pump',
+  'zj-slurry-pump': 'ZJ Slurry Pump',
+  'zgb-slurry-pump': 'ZGB Slurry Pump',
+  'sf-pump': 'SF Pump',
+  'shf-pump': 'SHF Front Pump',
+  'metal-parts': 'Metal parts',
+  'rubber-parts': 'Rubber parts'
+};
 
 // Add this const before the ProductDetail component
 const productDetailsMap: { [key: string]: ProductDetails } = {
@@ -115,27 +126,213 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
     }
   },
   'shr-rubber-lined-slurry-pump': {
-    description: "The SHR Rubber Lined Slurry Pump is specifically engineered for corrosive and mildly abrasive slurry applications. The natural rubber lining provides excellent resistance to corrosion and moderate abrasion.",
+    description: [
+    "Rubber lined slurry pumps are similar to metal lined slurry pumps in structure, but rubber lined slurry pumps are more cable of withstanding highly abrasive and corrosive small particles without sharp edges.",
+    "The inner linings of our factory can be made of several kinds of materials according to customer’s requests, for example, High chrome-A05 material, PU, rubber material.",
+    ],
     features: [
-      "Natural rubber lining",
-      "Corrosion resistant design",
-      "Heavy-duty shaft assembly",
-      "Extended service life",
-      "Low maintenance requirements",
-      "Excellent chemical resistance"
-    ]
+      "The rubber lining is made from special materials and it has a higher corrosion and abrasion tolerance.",
+      "Slurry pump's bearing assembly use cylindrical structure, adjusting the space between impeller and front liner easily. They can be removed completely when being repaired. Rubber lined pumps can be repaired, just replace the liners.",
+      "Expeller, mechanical or packing seal is available for use, depending on your own requirements."
+    ],
+    specifications: {
+      discharge_size: "1\" to 18\"",
+      capacity: "5,000 m³/h",
+      head: "73 m",
+      handling_solids_to: "130mm"
+    }
   },
   'slsm-slurry-pump': {
-    description: "The SLSM Slurry Pump series offers a versatile solution for medium-duty slurry applications. Combines efficiency with durability for optimal performance in various industrial processes.",
+    description: [
+      "M series slurry pumps, with its encapsulated design, are similar to the SH series pumps, but M series slurry pumps have a significantly reduced physical size compared to the SH pumps.",
+      "M(R) is a kind of middle duty slurry pump. It is used to transfer the fine particle size and middle density slurries.",
+      "The impellers, and liners of M series slurry pumps can be replaced and materials can be either metal or rubber. The application of M series is in metallurgy, mining, mineral processing, dredging, coal washing, tailing, etc.",
+      "The commonly used 10x8E-SM Medium Duty Slurry Pump is mainly suitable for pumping medium concentration slurries. 10x8E-SM slurry pump applies in coal wash processing, handling with the fine ore and tailing in metal mining etc."
+    ],
+    specifications: {
+      discharge_size: "0.75\" to 26\"",
+      capacity: "10,225 m³/h",
+      head: "	55m",
+      pressure_to: "1030 kPa"
+    }
+  },
+  'shh-slurry-pump': {
+    description: [
+    "The High Head Slurry Pumps are heavy-duty slurry pumps which are able to transfer high-density and abrasive slurries in heavy industry and mining sites, coal washing plant, power plant, metallurgy, dredging and other industrial departments. With thick wear parts and heavy-duty support, SHH series could run in series in the allowable range of pump working pressure.",
+    "The liner and impeller of SHH model can be changeable and material can be either anti-abrasive metal or rubber. but material of liner and impeller of HH model only can be metal version.",
+    ],
     features: [
-      "Medium-duty design",
-      "Balanced impeller design",
-      "Multiple material options",
-      "Standardized parts",
-      "Easy maintenance access",
-      "Efficient operation"
-    ]
-  }
+      "Heavy-duty pump",
+      "Suitable for pumping liquid to high heights",
+      "Slow speeds due to large impeller diameters",
+      "suitable for all types of sludges",
+      "Solid concentrations up to 70 percent weight",
+      "Housing pressure up to 34bar",
+      "Coarse Sand",
+      "Mineral Concentration"
+    ],
+    specifications: {
+      discharge_size: "1\" to 6\"",
+      capacity: "16.2-1008 m³/h",
+      head: "12-118m",
+      handling_solids_to: "0-70mm"
+    }
+  },
+  'sv-svr-vertical-slurry-pump': {
+    description: [
+    "Vertical Centrifugal Pump can operate normally without shaft gland and shaft gland water even lack ofinsufficient suction volume. SP pump body is made from anti-friction metals, and the impeller is made from anti-friction metal or rubber and polyurethane. Submerged parts of the SPR pump coated rubber for transportation corrosive slurry.",
+    ],
+    features: [
+      "Abrasive and/or corrosive slurries",
+      "Large particle size",
+      "High slurry densities",
+      "Continuous or “snore” operations",
+      "Heavy duties demanding cantilevered shafts"
+    ],
+    specifications: {
+      discharge_size: "40 – 250 mm or 1.5 – 10 inches",
+      capacity: "Up to 1,180 m3/h or 5,200 US gpm",
+      head: "Up to 55 m or 180 feet",
+      working_pressure: "750 kPa or 110 psi"
+    }
+  },
+  'zjl-vertical-sump-pump': {
+    specifications: {
+      discharge_size: "40 – 150 mm or 1.5 – 6 inches",
+      capacity: "Up to 364 m3/h or 1600 US gpm",
+      head: "Up to 55 m or 180 feet",
+      working_Pressure:	"750 kPa or 110 psi"
+    }
+  },
+  'gravel-pump': {
+    description: [
+    "The SG(SGH)pumps are designed for the transportation of strong abrasive materials whose particles are too large to be transported by general slurry pump. They are suitable for delivering slurries in Mining, Dredging in dredger and course of rivers, and other fields.  Single casing with broad flow pathway as well as decreased NPSHr makes longteng pumps as a best selection for dredging.",
+    ],
+    features: [
+      "Enhanced slurry pump system format streamlines maintenance procedure, ensures long life span, and also match the pump for strong jobs of pumping slurries with large solids.",
+      "Unique design to make maintenance and wet parts replacement convenient.",
+      "Wide flow passage enables a big volume of slurry to pass. The sand and also crushed rock slurry pumps are specially made to manage high-abrasion applications that normal pumps can not even try.",
+      "Continuous or “snore” operations",
+      "Excellent NPSH performance, long service life, high efficiency ,which can meet many poor transport conditions.",
+      "The discharge direction of pump can be oriented in any direction of 360°.",
+      "Driving type mainly have V belt drive, elastic coupling drive, gear reducer drive, hydraulic coupling drive, variable frequency driven etc.",
+      "Shaft seal choices: packaging gland seal, centrifugal seal, and mechanical seal. Customers can conveniently change one sort of seal with an additional in order match the particular pumping application."
+    ],
+    specifications: {
+      discharge_size: "4\"-16\"",
+      capacity: "	3,200 m³/h",
+      head: "73 m",
+      handing_solids_to: "254 mm"
+    }
+  },
+  'wn-pump': {
+    description: [
+    "WN /WNQ series dredging pump is a single state, single suction, cantilever, horizontal type, it is divided into two kinds of structures according to the size of pressure discharging single and double pump casing.",
+    "200 ~ 500 WN uses the single shell structure, 600 ~ 1000 WN uses the double pump housing structure. The double pump housing design may guarantee the long term security reliable movement. 600 ~ 1000 WNQ uses the single pump housing structure. It may use the grease lubrication or the oil lubrication withe the base."  
+    ],
+    features: [
+      "The special construction, the bridge, the harbor, the river, the civil engineering drain off water using.",
+      "The sand graduated field, the cement depot, and the kiln industry sewage removes.",
+      "The sedimentation pool, organic sewage, dirt mud discharges.",
+      "The water of underground, subway, building foundation, underground spring discharges.",
+      "The water accumulation of civil engineering, spring water, sewage, the basement, the concave land discharge.",
+    ],
+    specifications: {
+      discharge_size: "200mm-1000mm",
+      capacity: "25000m³/h",
+      head: "76m",
+      handling_solids_to: "350mm"
+    }
+  },
+  'zj-slurry-pump': {
+    specifications: {
+      discharge_size: "40-350mm",
+      capacity: "2300m",
+      head: "133m",
+      handling_solids_to: "125 mm"
+    }
+  },
+  'zgb-slurry-pump': {
+    specifications: {
+      discharge_size: "40-350mm",
+      capacity: "2300m",
+      head: "133m",
+      handling_solids_to: "125 mm"
+    }
+  },
+  'sf-pump': {
+    description: [
+    "The FROTH PUMP SF series is a new generation of products. Now, it is widely used in metallurgical, mining, coal, chemical and other industrial sectors. It is mostly used to handle abrasive or corrosive frothy slurries, mainly in flotation.",
+  "It can still work normally under the case of material shortages, and features a wide choice for various flotation processes. It is an ideal product for conveying foam pulp."
+ ],
+    features: [
+      "Hard metal lined vertical froth pumps SF series have been designed to increase the pumpability of frothy slurry. The principle of operation is similar to that of hydrocyclone separation.",
+      "Standard pumps are supplied with parts in wear resistant high chrome iron alloy, with a nominal hardness of 58-65HRC.",
+      "The SF froth pump is ideal for all applications involving handling of air entrained slurries, such as flotation froth in base metal concentrators, phosphate and apatite washing plants and calcium carbonate upgrading plants. The pump can also be used as a mixing and distribution unit, where dry powder has to be mixed with water."
+    ],
+    specifications: {
+      discharge_size: "2 – 8 inches",
+      capacity: "Up to 650 m3/h",
+      head: "Up to 30 m",
+      handing_solids_to: "79mm"
+    }
+  },
+  'shf-pump': {
+    description: [
+    "Based on the SH design, but specifically designed for pumping froth. The innovative SH Horizontal Froth pump design allows for froth and other products to be handled efficiently and without issues usually associated with pumping products with high viscosity.",
+    "An inducer blade impeller encourages positive froth feed. A widened slurry throat bush reduces NPSH required and optimises the inlet size, allowing for froth to be pumped with maximum efficiency.",
+    "An inducer blade impeller encourages positive froth feed. A widened slurry throatbush reduces NPSH required and optimises the inlet size, allowing for froth to be pumped with maximum efficiency."
+ ],
+    features: [
+      "Wide slurry throatbush reduces NPSH required and optimises inlet size",
+      " Interchangeable with the standard SH bearing assembly, drive end and shaft, thereby reducing site inventory levels",
+      "Wet end uses standard SH frame plate liners and frame plates",
+      "Inducer blade impeller encourages positive froth feed",
+      "K-HS Pump can be changed into a SH with a few small modifications"
+    ],
+    specifications: {
+      discharge_size: "2 – 8 inches",
+      capacity: "Up to 650 m3/h",
+      head: "Up to 30 m",
+      handing_solids_to: "79mm"
+    }
+  },
+  'metal-parts': {
+    specifications: {
+      'material':	'L05, L49 , L51,L61',
+      'ph':	'4-12'
+    }
+  },
+    'rubber-parts': {
+      description: [
+    "Longteng slurry pump rubber wet parts are great wear resistance and corrosion resistance, usually used for acid working conditions. Such as tailing in mining industry, slurry with small particles and no rough edges.",
+    "The replaceable parts includes Impeller,Cover Plate Liner, Throat bushing, Frame plate liner, Frame Plate Liner Insert. The rubber spare parts are made of Natural Rubber, code is SR26, SR55 and SR33 and other special designed according to site which guarantees excellent performance including wear resistance, chemical resistance , waterproof and higher operating temperature range from -40-75."
+   ],
+    specifications: {
+      'material':	'Natural rubber, EPDM, NBR'
+    }
+  },
+    'pu-parts': {
+      description: [
+    "PU Slurry Pump Parts: Current elastomer parts available in SU01 include the following",
+    "Liners, 041, 018, 036, etc",
+    "Impellers, and Throatbushes, available in all sizes."
+   ],
+    features: [
+      "SU01 is suitable for fine to medium particle erosive slurry applications.",
+      "Liners: maximum particle size = 10mm.",
+      "Minimum pH: 1",
+      "Maximum pH: 14",
+      "Maximum Temperature (°C): 70",
+      "Maximum Particle Size (mm): 10",
+      "excluding tramp",
+      "Maximum Tip Speed (m/sec): 30"
+    ],
+    specifications: {
+      'material':	'Polyurethane',
+      'ph': '5-8'
+    }
+  },
   // Add more products as needed
 };
 
@@ -226,13 +423,18 @@ debugger
     
     return categoryImageMap[`${categorySlug}-${subcategorySlug}`] || slurryPumpsImage;
   };
-debugger
-  // Convert slug back to readable text
-  const slugToText = (slug: string) => {
-    return slug.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
-  };
+
+const slugToText = (slug: string) => {
+  // Check if the slug exists in our mapping
+  if (productNameMap[slug]) {
+    return productNameMap[slug];
+  }
+  
+  // Fall back to default capitalization for unmapped items
+  return slug.split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
 
   const categoryName = slugToText(categorySlug);
   const subcategoryName = slugToText(subcategorySlug);
@@ -373,11 +575,6 @@ debugger
                   In Stock
                 </Badge>
               </div>
-              <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Badge variant="secondary" className="bg-background/95 backdrop-blur-sm text-foreground w-full justify-center py-2">
-                  Click to zoom
-                </Badge>
-              </div>
             </div>
 
             {/* Product Info */}
@@ -407,23 +604,27 @@ debugger
     </CardDescription>
   </CardHeader>
   <CardContent>
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {productDetailsMap[productSlug]?.specifications
-        ? Object.entries(productDetailsMap[productSlug].specifications).map(([key, value]) => (
-          <div key={key} className="p-3 rounded-lg bg-muted/30 border border-border/50 space-y-1 hover:bg-muted/40 transition-colors">
-            <div className="text-sm font-medium text-primary">
-              {key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-            </div>
-            <div className="text-base font-medium">{value}</div>
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {productDetailsMap[productSlug]?.specifications ? (
+      Object.entries(productDetailsMap[productSlug].specifications).map(([key, value]) => (
+        <div key={key} className="p-3 rounded-lg bg-muted/30 border border-border/50 space-y-1 hover:bg-muted/40 transition-colors">
+          <div className="text-sm font-medium text-primary">
+            {key.split('_')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ')}
           </div>
-        ))
-        : Object.entries(specifications).map(([key, value]) => (
+          <div className="text-base font-medium">{value}</div>
+        </div>
+      ))
+    ) : (
+        // Fall back to category-based specifications if no product-specific specs
+        Object.entries(getProductSpecs(categorySlug, productName)).map(([key, value]) => (
           <div key={key} className="p-3 rounded-lg bg-muted/30 border border-border/50 space-y-1 hover:bg-muted/40 transition-colors">
             <div className="text-sm font-medium text-primary">{key}</div>
             <div className="text-base font-medium">{value}</div>
           </div>
         ))
-      }
+      )}
     </div>
   </CardContent>
 </Card>
@@ -472,7 +673,7 @@ debugger
           </div>
           <div className="prose text-muted-foreground">
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold">Product Description</h3>
+                  <h3 className="text-xl font-semibold text-black">Product Description</h3>
                   <div className="space-y-2">
                     {Array.isArray(productDetailsMap[productSlug]?.description) ? (
                       productDetailsMap[productSlug].description.map((point, index) => (

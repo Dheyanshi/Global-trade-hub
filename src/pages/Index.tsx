@@ -609,13 +609,13 @@ const products = [
                           <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                             Request Quote
                           </Button>
-                          <Button
+                          {/* <Button
                             variant="outline"
                             className="border-blue-200 hover:bg-blue-50"
                             onClick={() => window.open(product.link, "_blank")}
                           >
                             <ExternalLink className="h-4 w-4" />
-                          </Button>
+                          </Button> */}
                         </div>
                       </div>
                     </CardContent>
