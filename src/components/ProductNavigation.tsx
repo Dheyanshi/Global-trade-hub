@@ -33,8 +33,8 @@ const ProductNavigation = () => {
           items: ["ZJ Slurry Pump", "ZGB Slurry Pump"]
         },
         {
-          name: "SHP/SHPP High Pressure Pumps",
-          items: []
+          name: "High Pressure Pumps",
+          items: ["SHP/SHPP High Pressure Pumps"]  // Update this line
         },
         {
           name: "Froth Pump",

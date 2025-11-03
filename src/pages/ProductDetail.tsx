@@ -51,7 +51,7 @@ import efStubEndImage from '@/assets/hdpe-pipe-fittings/ef-stub-end.jpg';
 // import efFemaleThreadImage from '@/assets/ef-female-thread.jpg';
 // import efMaleThreadImage from '@/assets/ef-male-thread.jpg';
 // import efCrossTeeImage from '@/assets/hdpe-pipe-fittings/ef-cross-tee.jpg';
-
+import shpShppPumpImage from '@/assets/hdpe-pipe-fittings/Shpp-high-pressure-pumps.jpeg'
 import bfEndCapImage from '@/assets/hdpe-pipe-fittings/bf-end-cap.jpg';
 // import bf225ElbowImage from '@/assets/hdpe-pipe-fittings/';
 import bf45ElbowImage from '@/assets/hdpe-pipe-fittings/bf-45-elbow.jpg';
@@ -84,15 +84,18 @@ const productNameMap: { [key: string]: string } = {
   'shr-rubber-lined-slurry-pump': 'SHR Rubber Lined Slurry Pump',
   'slsm-slurry-pump': 'SL/SM Slurry Pump',
   'shh-slurry-pump': 'SHH Slurry Pump',
-  'sv-svr-vertical-slurry-pump': 'SV/SVR Vertical sump pumps',
+  'sv-svr-vertical-slurry-pump': 'SV/SVR Vertical Sump Pumps',
   'zjl-vertical-sump-pump': 'ZJL Vertical Sump Pumps',
   'gravel-pump': 'Gravel Pump',
   'zj-slurry-pump': 'ZJ Slurry Pump',
   'zgb-slurry-pump': 'ZGB Slurry Pump',
   'sf-pump': 'SF Pump',
-  'shf-pump': 'SHF Front Pump',
-  'metal-parts': 'Metal parts',
-  'rubber-parts': 'Rubber parts'
+  'shf-pump': 'SHF Froth Pump',
+  'metal-parts': 'Metal Parts',
+  'rubber-parts': 'Rubber Parts',
+  'wn-pump': 'WN Pump',
+  'pu-parts': 'PU Parts',
+  'shpshpp-high-pressure-pumps': 'SHP/SHPP High Pressure Pumps'
 };
 
 // Add this const before the ProductDetail component
@@ -159,7 +162,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   'shh-slurry-pump': {
     description: [
     "The High Head Slurry Pumps are heavy-duty slurry pumps which are able to transfer high-density and abrasive slurries in heavy industry and mining sites, coal washing plant, power plant, metallurgy, dredging and other industrial departments. With thick wear parts and heavy-duty support, SHH series could run in series in the allowable range of pump working pressure.",
-    "The liner and impeller of SHH model can be changeable and material can be either anti-abrasive metal or rubber. but material of liner and impeller of HH model only can be metal version.",
+    "The liner and impeller of SHH model can be changeable and material can be either anti-abrasive metal or rubber but material of liner and impeller of HH model only can be metal version.",
     ],
     features: [
       "Heavy-duty pump",
@@ -180,7 +183,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'sv-svr-vertical-slurry-pump': {
     description: [
-    "Vertical Centrifugal Pump can operate normally without shaft gland and shaft gland water even lack ofinsufficient suction volume. SP pump body is made from anti-friction metals, and the impeller is made from anti-friction metal or rubber and polyurethane. Submerged parts of the SPR pump coated rubber for transportation corrosive slurry.",
+    "Vertical Centrifugal Pump can operate normally without shaft gland and shaft gland water even lack of insufficient suction volume. SP pump body is made from anti-friction metals, and the impeller is made from anti-friction metal or rubber and polyurethane. Submerged parts of the SPR pump coated rubber for transportation corrosive slurry.",
     ],
     features: [
       "Abrasive and/or corrosive slurries",
@@ -206,7 +209,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'gravel-pump': {
     description: [
-    "The SG(SGH)pumps are designed for the transportation of strong abrasive materials whose particles are too large to be transported by general slurry pump. They are suitable for delivering slurries in Mining, Dredging in dredger and course of rivers, and other fields.  Single casing with broad flow pathway as well as decreased NPSHr makes longteng pumps as a best selection for dredging.",
+    "The SG(SGH)pumps are designed for the transportation of strong abrasive materials whose particles are too large to be transported by general slurry pump. They are suitable for delivering slurries in Mining, Dredging in dredger and course of rivers, and other fields.  Single casing with broad flow pathway as well as decreased NPSHr makes these pumps as a best selection for dredging.",
     ],
     features: [
       "Enhanced slurry pump system format streamlines maintenance procedure, ensures long life span, and also match the pump for strong jobs of pumping slurries with large solids.",
@@ -228,7 +231,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   'wn-pump': {
     description: [
     "WN /WNQ series dredging pump is a single state, single suction, cantilever, horizontal type, it is divided into two kinds of structures according to the size of pressure discharging single and double pump casing.",
-    "200 ~ 500 WN uses the single shell structure, 600 ~ 1000 WN uses the double pump housing structure. The double pump housing design may guarantee the long term security reliable movement. 600 ~ 1000 WNQ uses the single pump housing structure. It may use the grease lubrication or the oil lubrication withe the base."  
+    "200 ~ 500 WN uses the single shell structure, 600 ~ 1000 WN uses the double pump housing structure. The double pump housing design may guarantee the long term security reliable movement. 600 ~ 1000 WNQ uses the single pump housing structure. It may use the grease lubrication or the oil lubrication with the base."  
     ],
     features: [
       "The special construction, the bridge, the harbor, the river, the civil engineering drain off water using.",
@@ -281,11 +284,10 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
     description: [
     "Based on the SH design, but specifically designed for pumping froth. The innovative SH Horizontal Froth pump design allows for froth and other products to be handled efficiently and without issues usually associated with pumping products with high viscosity.",
     "An inducer blade impeller encourages positive froth feed. A widened slurry throat bush reduces NPSH required and optimises the inlet size, allowing for froth to be pumped with maximum efficiency.",
-    "An inducer blade impeller encourages positive froth feed. A widened slurry throatbush reduces NPSH required and optimises the inlet size, allowing for froth to be pumped with maximum efficiency."
- ],
+    ],
     features: [
       "Wide slurry throatbush reduces NPSH required and optimises inlet size",
-      " Interchangeable with the standard SH bearing assembly, drive end and shaft, thereby reducing site inventory levels",
+      "Interchangeable with the standard SH bearing assembly, drive end and shaft, thereby reducing site inventory levels",
       "Wet end uses standard SH frame plate liners and frame plates",
       "Inducer blade impeller encourages positive froth feed",
       "K-HS Pump can be changed into a SH with a few small modifications"
@@ -325,15 +327,28 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       "Maximum pH: 14",
       "Maximum Temperature (°C): 70",
       "Maximum Particle Size (mm): 10",
-      "excluding tramp",
+      "Excluding Tramp",
       "Maximum Tip Speed (m/sec): 30"
     ],
     specifications: {
       'material':	'Polyurethane',
-      'ph': '5-8'
+      'pH': '5-8'
     }
   },
-  // Add more products as needed
+  'shpshpp-high-pressure-pumps': {
+    description: [
+    "SHP/SHPP higher-pressure capability allows the user to operate several pumps in series, all consolidated into one pump house. This high-pressure slurry pump is perfect to handle high-density slurry applications with a very high pressure around 6900 kPa."    ],
+    features: [
+      "SHPP, compared with SH series, is a high-pressure pump and has a bigger bearing frame.",
+      "When SH slurry pumps can’t be used under high working pressure exceeding 2100kPa, SHPP slurry pumps can be provided.",
+    ],
+    specifications: {
+      discharge_size: "100 – 450 mm or 4 – 18 inches",
+      capacity: "Up to 6,700 m3/h or up to 29,600 US gpm",
+      head: "Up to 88 m or up to 280 feet",
+      working_pressure: "6,900 kPa or 1,000 psi"
+    }
+  },
 };
 
 const ProductDetail = () => {
@@ -353,7 +368,7 @@ debugger
       'shr-rubber-lined-slurry-pump': shrRubberLinedPumpImage,
       'slsm-slurry-pump': slSmSlurryPumpImage,
       'shh-slurry-pump': shhSlurryPumpImage,
-      
+      'shpshpp-high-pressure-pumps': shpShppPumpImage,
       // Vertical Sump Pumps
       'sv-svr-vertical-slurry-pump': svSvrVerticalPumpImage,
       'zjl-vertical-sump-pump': zjlVerticalPumpImage,
@@ -408,7 +423,7 @@ debugger
       'slurry-pumps-centrifugal-slurry-pumps': shMetalLinedPumpImage,
       'slurry-pumps-gravel-dredging-pumps': gravelDredgingPumpImage,
       'slurry-pumps-zjzgb-slurry-pumps': zjZgbSlurryPumpImage,
-      'slurry-pumps-shpshpp-high-pressure-pumps': highPressurePumpImage,
+      'slurry-pumps-shpshpp-high-pressure-pumps': shpShppPumpImage,
       'slurry-pumps-froth-pump': frothPumpImage,
       'slurry-pumps-pump-parts': pumpPartsImage,
       'hdpe-pipe-fittings-electrofusion-fitting': electrofusionFittingsImage,
@@ -586,9 +601,11 @@ const slugToText = (slug: string) => {
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   {productName}
                 </h1>
-                <p className="text-lg">
+                {subcategoryName !== 'Froth Pump' && (
+                  <p className="text-lg">
                   {subcategoryName}
-                </p>
+                  </p>
+                )}
               </div>
 
               {/* <div className="prose text-muted-foreground"> */}
