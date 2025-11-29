@@ -71,8 +71,9 @@ const productData: ProductCategory[] = [
         items: ["ZJ Slurry Pump", "ZGB Slurry Pump"]
       },
       {
-        name: "SHP/SHPP High Pressure Pumps",
-        image: highPressurePumpImage
+        name: "High Pressure Pumps",
+        image: highPressurePumpImage,
+        items: ["SHP/SHPP High Pressure Pumps"]
       },
       {
         name: "Froth Pump",
