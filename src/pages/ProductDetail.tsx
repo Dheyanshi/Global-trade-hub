@@ -349,6 +349,149 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       working_pressure: "6,900 kPa or 1,000 psi"
     }
   },
+  'butt-fusion-equal-tee': {
+    description: [
+    "DPE butt fusion fitting is one of three main methods of connecting the pipes, The consultant engineer will determine the pipe connection method according to the facilities available at the time of work in the specifications of the design. At the moment, the butt fusion connection is used for the main projects of HDPE piping and the flange connection is used for special fittings. PE butt fusion fitting will reached a solid connection to avoid leakage, on the other hand, compared with socket fusion fittings, the maxmum size of butt fusion equal tee can reached to 800mm and satisfy some project which need large dimensions, of cause, products advantages as below:",
+    "High corrosion resistance, long service life.",
+    "PE has excellent chemical stability, good flexibility.",
+    "Light weight, easy to install and lower transport and maintenance.",
+    "Nontoxic, no Leakage, higher flow capacity.",
+    "The inside pipe wall is extremely smooth and difficult to leave over dirt.",
+    "Recycled and environment-friendly.",
+    "Applied to water supply, drainage, industrial liquid, municipal works, agricultural irrigation etc."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn63mm-dn800mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-equal-coupler': {
+    description: [
+    "HDPE electro fusion coupler, we also called HDPE electro fusion equal coupling which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "In the butt fusion welding method, heaters are used to heat the surface of both head of pipe and the HDPE joints, but in the electrofusion welding method, the heat is generated internally and through the electric current, to make sure pipe and fitting completely connected, no leakage. Electrofusion coupling is a common fitting for connecting two polyethylene tubes to each other."],
+     features: [
+      "Municipal water supply, gas supply and agriculture etc.",
+      "Commercial & Residential water supply",
+      "Industrial liquids transportation",
+      "Sewage treatment",
+      "Food and chemical industry",
+      "Replacement of cement pipes and steel pipes",
+      "Argillaceous silt, mud transportation",
+      "Garden green pipe networks"
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn25mm-dn800mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-end-cap': {
+    description: [
+    "HDPE electro fusion end cap, we also called HDPE end cap and pipe end, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn50mm-dn250mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-45elbow': {
+    description: [
+    "HDPE electro fusion 45 degree elbow, we also called HDPE electro fusion 45 degree bend, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "In the butt fusion welding method, heaters are used to heat the surface of both head of pipe and the HDPE joints, but in the electrofusion welding method, the heat is generated internally and through the electric current, to make sure pipe and fitting completely connected, no leakage. Electrofusion coupling is a common fitting for connecting two polyethylene tubes to each other.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn50mm-dn250mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-90elbow': {
+    description: [
+    "HDPE electro fusion 90 degree elbow, we also called HDPE electro fusion 90 degree bend, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn25mm-dn630mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-equal-tee': {
+    description: [
+    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn32mm-dn630mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-reducing-tee': {
+    description: [
+    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn32*25mm-dn630*500mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-reducer': {
+    description: [
+    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn32*25mm-dn500*400mm(inner diameter) ',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'ef-stub-end': {
+    description: [
+    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main diffrence is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "Gaohui can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn50mm-dn800mm(inner diameter)',
+      pressure: 'SDR17 PN10, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
+      loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
 };
 
 const ProductDetail = () => {
@@ -358,7 +501,7 @@ const ProductDetail = () => {
   // Parse the pathname to get product information
   const pathParts = location.pathname.replace('/product/', '').split('/');
   const [categorySlug, subcategorySlug, productSlug] = pathParts;
-debugger
+
   // Product data mapping
   const getProductImage = (categorySlug: string, subcategorySlug: string, productSlug: string) => {
     // First check for specific product images
@@ -384,7 +527,7 @@ debugger
       'rubber-parts':rubberParts,
       'pu-parts': puParts,
       'ef-equal-coupler': efEqualCouplerImage,
-      'ef-end-cup': efEndCapImage,
+      'ef-end-cap': efEndCapImage,
       'ef-45elbow': ef45ElbowImage,
       'ef-90elbow': ef90ElbowImage,
       'ef-equal-tee': efEqualTeeImage,

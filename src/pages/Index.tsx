@@ -495,8 +495,8 @@ const products = [
                     <div className="pt-4 border-t">
                       <div className="font-semibold mb-2">Head Office</div>
                       <div className="text-sm text-muted-foreground">
-                        1107 Fortun Business Hub, Nr. Satymev ELYSIM,<br />
-                        Ahmedabad, Gujarat, India – 380060
+                        1107, Fortune Business Hub, Science City Road,<br />
+                        Ahmedabad, Gujarat, India – 380060 (INDIA)
                       </div>
                     </div>
                   </CardContent>
@@ -1025,8 +1025,8 @@ const products = [
                       <div>
                         <div className="font-semibold">Head Office</div>
                         <div className="text-muted-foreground">
-                          1107 Fortun Business Hub, Nr. Satymev ELYSIM,<br />
-                          Ahmedabad, Gujarat, India – 380060
+                          1107, Fortune Business Hub, Science City Road,<br />
+                        Ahmedabad, Gujarat, India – 380060 (INDIA)
                         </div>
                       </div>
                     </div>
@@ -1034,14 +1034,14 @@ const products = [
                       <Phone className="h-6 w-6 text-primary" />
                       <div>
                         <div className="font-semibold">Phone</div>
-                        <div className="text-muted-foreground">+91 XXX XXX XXXX</div>
+                        <div className="text-muted-foreground">+91-851 165 9393</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Mail className="h-6 w-6 text-primary" />
                       <div>
                         <div className="font-semibold">Email</div>
-                        <div className="text-muted-foreground">info@dheyanshinternational.com</div>
+                        <div className="text-muted-foreground">operations@dheyanshi.com</div>
                       </div>
                     </div>
                   </div>
@@ -1049,8 +1049,8 @@ const products = [
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
                   <div className="space-y-2 text-muted-foreground">
-                    <div>Monday - Friday: 9:00 AM - 6:00 PM IST</div>
-                    <div>Saturday: 9:00 AM - 2:00 PM IST</div>
+                    <div>Monday to Friday : 11:00 AM to 8:00 PM</div>
+                    <div>Saturday: 11:00 AM to 4:30 PM</div>
                     <div>Sunday: Closed</div>
                   </div>
                 </div>

@@ -97,7 +97,7 @@ const productData: ProductCategory[] = [
         name: "Electrofusion Fitting",
         image: electrofusionFittingsImage,
         items: [
-          "EF Equal Coupler", "EF End Cup", "EF 45°Elbow", "EF 90°Elbow", 
+          "EF Equal Coupler", "EF End Cap", "EF 45°Elbow", "EF 90°Elbow", 
           "EF Equal Tee", "EF Reducing Tee", "EF Reducer", "EF Stub End", 
           "EF Female Thread Coupler", "EF Male Thread Coupler", "EF Cross Tee"
         ]
