@@ -60,19 +60,11 @@ const ProductNavigation = () => {
           ]
         },
         {
-          name: "Short Type Butt Fusion Fitting",
+          name: "Butt Fusion Fitting",
           items: [
             "Butt Fusion End Cap", "Butt Fusion 22.5°Elbow", "Butt Fusion 45°Elbow", 
             "Butt Fusion 90°Elbow", "Butt Fusion Flange", "Butt Fusion Equal Tee", 
             "Butt Fusion Reducing Tee", "Butt Fusion Reducing Coupling", "Butt Fusion Reducing Cross"
-          ]
-        },
-        {
-          name: "Long Type Butt Fusion Fitting",
-          items: [
-            "Butt Fusion End Cap", "Butt Fusion Elbow 45°", "Butt Fusion Elbow 90°", 
-            "Butt Fusion Flange Adaptor (Long Neck)", "Butt Fusion Flange Adaptor",
-            "Butt Fusion Equal Tee", "Butt Fusion Reducing Tee", "Butt Fusion Reducer"
           ]
         }
       ]
