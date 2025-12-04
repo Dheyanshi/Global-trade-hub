@@ -61,6 +61,7 @@ import bfEqualTeeImage from '@/assets/hdpe-pipe-fittings/bf-equal-tee.jpg';
 import bfReducingTeeImage from '@/assets/hdpe-pipe-fittings/bf-reducing-tee.jpg';
 import bfReducingCouplingImage from '@/assets/hdpe-pipe-fittings/bf-reducing-coupling.jpg';
 import bfReducingCrossImage from '@/assets/hdpe-pipe-fittings/bf-reducing-cross.jpg';
+import { features } from 'process';
 interface SubcategoryDetails {
   name: string;
   description: string;
@@ -106,7 +107,9 @@ const productNameMap: { [key: string]: string } = {
   'ef-stub-end': 'EF Stub End',
   'ef-female-thread-coupler': 'EF Female Thread Coupler',
   'ef-male-thread-coupler': 'EF Male Thread Coupler',
-  'ef-cross-tee': 'EF Cross Tee'
+  'ef-cross-tee': 'EF Cross Tee',
+  'butt-fusion-45elbow': 'Butt Fusion 45 Degree Elbow',
+  'butt-fusion-90elbow': 'Butt Fusion 90 Degree Elbow',
 };
 
 // Add this const before the ProductDetail component
@@ -362,7 +365,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'butt-fusion-equal-tee': {
     description: [
-    "DPE butt fusion fitting is one of three main methods of connecting the pipes, The consultant engineer will determine the pipe connection method according to the facilities available at the time of work in the specifications of the design. At the moment, the butt fusion connection is used for the main projects of HDPE piping and the flange connection is used for special fittings. PE butt fusion fitting will reached a solid connection to avoid leakage, on the other hand, compared with socket fusion fittings, the maxmum size of butt fusion equal tee can reached to 800mm and satisfy some project which need large dimensions, of cause, products advantages as below:",
+    "HDPE butt fusion fitting is one of three main methods of connecting the pipes, The consultant engineer will determine the pipe connection method according to the facilities available at the time of work in the specifications of the design. At the moment, the butt fusion connection is used for the main projects of HDPE piping and the flange connection is used for special fittings. HDPE Butt Fusion fitting will be reached a solid connection to avoid leakage, on the other hand, compared with socket fusion fittings, the maxmum size of butt fusion equal tee can reached to 800mm and satisfy some project which need large dimensions, of cause, products advantages as below:",
     "High corrosion resistance, long service life.",
     "PE has excellent chemical stability, good flexibility.",
     "Light weight, easy to install and lower transport and maintenance.",
@@ -378,6 +381,137 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       delivery_time: 'Stock available for regular sizes',
       production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.',
       loading_port: 'Ningbo or Shanghai, China'
+    }
+  },
+  'butt-fusion-end-cap': {
+    description: [
+    "HDPE butt fusion end caps are commonly used in pipe work to dead end the flow of  water. we can offer HDPE end caps in diameters ranging from 75mm to 1200mm in SDR11 ,SDR13.6 and SDR17."],
+    features: [
+      "The Butt Fusion is the most important and widely used method of connection for HDPE pipes larger than 110 mm. It is a method of jointing pipe ends by way of heating and cooling under pressure, resulting in pipe joints as strong as the pipe itself. The HDPE butt fusion requests the HDPE pipes & fittings have the same outer diameter, and the tolerance of wall thickness of both shall be no exceed 10%, in order to assure the best welding results."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn75mm-dn1200mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-45elbow': {
+    description: [
+    "Free sample",
+"Custom made as your request",
+"Quality guarantee",
+"OEM is ok"],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn63mm-dn800mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-90elbow': {
+    description: [
+    "We have full range size of HDPE 90°elbows made of 100% new raw material, and all sizes are injection moulded type, it have strong strength and more stable."],
+    features: [
+      "Application field: HDPE 90 degree elbows is used to join two lengths of HDPE pipe on an angle of 90 degrees."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn63mm-dn800mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-flange': {
+    description: [
+    "HDPE Flange Adapter, also called HDPE stub flange or HDPE stub end, is a cost effective, easy to assemble, mechanical joint intended to connect HDPE pipe to any flange piping components (such as valves, pumps..etc) without the need for costly fusion equipment.",
+    "When joining to metal or to certain other piping materials, or if a HDPE pipe section capable of disassembly is required, HDPE flange adaptor or HDPE stub flange are available. These items are designed so that one end matches the HDPE pipe for a butt fusion connection, the opposite end contains a stub that provides structural support. By utilizing the addition of a steel backup ring, it permits bolting to a similar flanged end connection to another pipe, of various possible materials.",
+    "HDPE flange adaptor shall be assembled together with steel backup rings (G.I. backing rings). Steel bolts/nuts & rubber gaskets will be also requested."],
+    features: [
+      "Municipal water supply, gas supply and agriculture etc.",
+      "Commercial & Residential water supply",
+      "Industrial liquids transportation",
+      "Sewage treatment",
+      "Food and chemical industry",
+      "Replacement of cement pipes and steel pipes",
+      "Argillaceous silt, mud transportation",
+      "Garden green pipe networks"
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn50mm-dn1200mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-reducing-tee': {
+    description: [
+    "HDPE butt fusion reducing tee, also know as HDPE tee reducer, is another type of pipe tee used in HDPE pipeline. Reducing tee, like all pipe tees, is in the shape of T with two ends of equal size and the third one slightly smaller. In other words, reducing tee is a type of pipe fitting in which the branch port size is smaller than the ports of the run. This type of pipe fitting can also consider size reduction from one of the run ports to the other."],
+    features: [
+      "The Butt Fusion is the most important and widely used method of connection for HDPE pipes larger than 110 mm. It is a method of jointing pipe ends by way of heating and cooling under pressure, resulting in pipe joints as strong as the pipe itself. The HDPE butt fusion requests the HDPE pipes & fittings have the same outer diameter, and the tolerance of wall thickness of both shall be no exceed 10%, in order to assure the best welding results."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn75*50mm-dn800*630mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-reducing-coupler': {
+    description: [
+    "HDPE reducer is commonly used for the connection of two different diameter pipelines, by reduce the pipe size from a larger diameter to a smaller diameter. Alternatively, reducer may refer to any fitting which causes a change in pipe diameter. This change may be intended to meet hydraulic flow requirements of the system or adapt to existing piping of a different size."],
+    features: [
+      "Municipal water supply, gas supply and agriculture etc.",
+      "Commercial & Residential water supply",
+      "Industrial liquids transportation",
+      "Sewage treatment",
+      "Food and chemical industry",
+      "Replacement of cement pipes and steel pipes",
+      "Argillaceous silt, mud transportation",
+      "Garden green pipe networks"
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn75*50mm-dn630*560mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'butt-fusion-reducing-cross': {
+    description: [
+    "Can all HDPE pipe fittings be provided in stock? To satisfy our customers’ prompt delivery request, SUNPLAST stacks large inventory of HDPE pipe fittings.",
+    "What technology do HDPE pipe fittings be made? Is it same to HDPE pipe manufacturing?",
+    "The HDPE pipe fittings are made by injection moulded technology. The one-time injection moulded with out any jointing makes the HDPE pipe fittings the most reliable solution for HDPE piping systems.",
+    "HDPE pipe is made by extrusion moulding, which is different to HDPE pipe fittings."],
+    features: [
+      "Municipal water supply, gas supply and agriculture etc.",
+      "Commercial & Residential water supply",
+      "Industrial liquids transportation",
+      "Sewage treatment",
+      "Food and chemical industry",
+      "Replacement of cement pipes and steel pipes",
+      "Argillaceous silt, mud transportation",
+      "Garden green pipe networks"
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn90*63mm-dn800*630mm(outer diameter)',
+      pressure: 'SDR17 PN10, SDR13.6 PN12.5, SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
     }
   },
   'ef-equal-coupler': {
@@ -423,7 +557,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
     "We can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
     specifications: {
       material: '100% virgin raw material',
-      size: 'dn50mm-dn250mm(inner diameter)',
+      size: 'dn50mm-dn630mm(inner diameter)',
       pressure: 'SDR17 PN10, SDR11 PN16',
       service_life: '50 years for normal use',
       delivery_time: 'Stock available for regular sizes',
@@ -458,7 +592,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'ef-reducing-tee': {
     description: [
-    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main difference is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "HDPE electro fusion reducing tee, we also called HDPE electro fusion tee reducer, like all electro fusion fittings which different from butt fusion fitting. The main difference is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
     "We can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
     specifications: {
       material: '100% virgin raw material',
@@ -484,7 +618,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'ef-stub-end': {
     description: [
-    "HDPE electro fusion equal tee, we also called HDPE electro fusion tee, like all electro fusion fittings which different from butt fusion fitting. The main difference is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
+    "HDPE electro fusion stub end, we also called HDPE stub end, like all electro fusion fittings which different from butt fusion fitting. The main difference is electro fusion fitting have copper wire coil inside and use electro fusion facility, it’s very easy to operate.",
     "We can provide full range of electro fusion fitting from dn25mm to 630mm, including coupling, elbow, tee flange and so on."],
     specifications: {
       material: '100% virgin raw material',
@@ -548,7 +682,7 @@ const ProductDetail = () => {
       'butt-fusion-flange': bfFlangeImage,
       'butt-fusion-equal-tee': bfEqualTeeImage,
       'butt-fusion-reducing-tee': bfReducingTeeImage,
-      'butt-fusion-reducing-coupling': bfReducingCouplingImage,
+      'butt-fusion-reducing-coupler': bfReducingCouplingImage,
       'butt-fusion-reducing-cross': bfReducingCrossImage,
     };
 

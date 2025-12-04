@@ -64,9 +64,31 @@ const ProductNavigation = () => {
           items: [
             "Butt Fusion End Cap", "Butt Fusion 22.5°Elbow", "Butt Fusion 45°Elbow", 
             "Butt Fusion 90°Elbow", "Butt Fusion Flange", "Butt Fusion Equal Tee", 
-            "Butt Fusion Reducing Tee", "Butt Fusion Reducing Coupling", "Butt Fusion Reducing Cross"
+            "Butt Fusion Reducing Tee", "Butt Fusion Reducing Coupler", "Butt Fusion Reducing Cross"
           ]
-        }
+        },
+        {
+        name: "Socket Fusion Fitting",
+        items: [
+          "Socket Fusion Equal Coupling", "Socket Fusion Reducing Coupler", "Socket Fusion Equal Tee", 
+          "Socket Fusion Reducing Tee", "Socket Fusion 90 Degree Elbow", "Socket Fusion 45 Degree Elbow", 
+          "Socket Fusion End Cap", "Socket Fusion Flange"
+        ]
+      },
+      {
+        name: "Thread Fitting",
+        items: [
+          "Thread Female Coupling", "Thread Male Coupling", "Thread Female Elbow", 
+          "Thread Male Elbow", "Thread Female Tee", "Thread Male Union Coupling", 
+          "Thread Female Union Coupling"
+        ]
+      },
+      {
+        name: "Valves",
+        items: [
+          "Valve For Irrigation Pipe", "Valve For Water Supply"
+        ]
+      }
       ]
     },
     {
