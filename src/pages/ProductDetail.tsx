@@ -8,18 +8,13 @@ import ContactForm from '@/components/ContactForm';
 
 // Import product images
 import slurryPumpsImage from '@/assets/slurry-pumps-category.jpg';
-import hdpeFittingsImage from '@/assets/hdpe-fittings-category.jpg';
-import toolsImage from '@/assets/tools-category.jpg';
-import hdpeValvesImage from '@/assets/hdpe-valves.jpg';
 import horizontalSlurryPumpImage from '@/assets/horizontal-slurry-pump.jpg';
 import verticalSlurryPumpImage from '@/assets/vertical-slurry-pump.jpg';
 import electrofusionFittingsImage from '@/assets/electrofusion-fittings.jpg';
 import buttFusionFittingsImage from '@/assets/butt-fusion-fittings.jpg';
 import hdpeBallValveImage from '@/assets/hdpe-ball-valve.jpg';
-import centrifugalSlurryPumpImage from '@/assets/centrifugal-slurry-pump.jpg';
 import gravelDredgingPumpImage from '@/assets/gravel-dredging-pump.jpg';
 import zjZgbSlurryPumpImage from '@/assets/zj-zgb-slurry-pump.jpg';
-import highPressurePumpImage from '@/assets/high-pressure-pump.jpg';
 import frothPumpImage from '@/assets/froth-pump.jpg';
 import pumpPartsImage from '@/assets/pump-parts.jpg';
 import customizedToolkitsImage from '@/assets/customized-toolkits.png';
@@ -48,12 +43,8 @@ import efEqualTeeImage from '@/assets/hdpe-pipe-fittings/ef-equal-tee.jpg';
 import efreducingTeeImage from '@/assets/hdpe-pipe-fittings/ef-rreducing-tee.jpg';
 import efReducerImage from '@/assets/hdpe-pipe-fittings/ef-reducer.jpg';
 import efStubEndImage from '@/assets/hdpe-pipe-fittings/ef-stub-end.jpg';
-// import efFemaleThreadImage from '@/assets/ef-female-thread.jpg';
-// import efMaleThreadImage from '@/assets/ef-male-thread.jpg';
-// import efCrossTeeImage from '@/assets/hdpe-pipe-fittings/ef-cross-tee.jpg';
 import shpShppPumpImage from '@/assets/hdpe-pipe-fittings/Shpp-high-pressure-pumps.jpeg'
 import bfEndCapImage from '@/assets/hdpe-pipe-fittings/bf-end-cap.jpg';
-// import bf225ElbowImage from '@/assets/hdpe-pipe-fittings/';
 import bf45ElbowImage from '@/assets/hdpe-pipe-fittings/bf-45-elbow.jpg';
 import bf90ElbowImage from '@/assets/hdpe-pipe-fittings/bf-90-elbow.jpg';
 import bfFlangeImage from '@/assets/hdpe-pipe-fittings/bf-flange.jpg';
@@ -61,7 +52,24 @@ import bfEqualTeeImage from '@/assets/hdpe-pipe-fittings/bf-equal-tee.jpg';
 import bfReducingTeeImage from '@/assets/hdpe-pipe-fittings/bf-reducing-tee.jpg';
 import bfReducingCouplingImage from '@/assets/hdpe-pipe-fittings/bf-reducing-coupling.jpg';
 import bfReducingCrossImage from '@/assets/hdpe-pipe-fittings/bf-reducing-cross.jpg';
-import { features } from 'process';
+import socketFusionEqualCouplingImage from '@/assets/hdpe-pipe-fittings/sf-equal-coupling.jpg';
+import socketFusionEqualCouplerImage from '@/assets/hdpe-pipe-fittings/sf-equal-coupler.jpg';
+import socketFusionEqualCouplerTeeImage from '@/assets/hdpe-pipe-fittings/sf-equal-tee.jpg';
+import socketFusionReducingTeeImage from '@/assets/hdpe-pipe-fittings/sf-reducing-tee.jpg';
+import socketFusion90DegreeImage from '@/assets/hdpe-pipe-fittings/sf-90-degree.jpg';
+import socketFusion45DegreeImage from '@/assets/hdpe-pipe-fittings/sf-45-degree.jpg';
+import socketFusionEndCapImage from '@/assets/hdpe-pipe-fittings/sf-end-cap.jpg';
+import socketFusionFlangeImage from '@/assets/hdpe-pipe-fittings/sf-flange.jpg';
+import ThreadFittingFemaleCouplingImage from '@/assets/hdpe-pipe-fittings/tf-female-coupling.jpg';
+import ThreadFittingMaleCouplingImage from '@/assets/hdpe-pipe-fittings/tf-male-coupling.jpg';
+import ThreadFittingFemaleElbowImage from '@/assets/hdpe-pipe-fittings/tf-female-elbowjpg.webp';
+import ThreadFittingMaleElbowImage from '@/assets/hdpe-pipe-fittings/tf-male-elbow.jpg';
+import ThreadFittingFemaleTeeImage from '@/assets/hdpe-pipe-fittings/tf-female-tee.jpg';
+import ThreadFittingUnionMaleImage from '@/assets/hdpe-pipe-fittings/tf-union-male.jpg';
+import ThreadFittingUnionFemaleImage from '@/assets/hdpe-pipe-fittings/tf-union-female.jpg';
+import valveIrrigationPipeImage from '@/assets/hdpe-pipe-fittings/valve-for-irrigation-pipe.jpg';
+import valveWaterSupplyPipeImage from '@/assets/hdpe-pipe-fittings/valve-for-water-supply.jpg';
+
 interface SubcategoryDetails {
   name: string;
   description: string;
@@ -491,9 +499,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'butt-fusion-reducing-cross': {
     description: [
-    "Can all HDPE pipe fittings be provided in stock? To satisfy our customers’ prompt delivery request, SUNPLAST stacks large inventory of HDPE pipe fittings.",
     "What technology do HDPE pipe fittings be made? Is it same to HDPE pipe manufacturing?",
-    "The HDPE pipe fittings are made by injection moulded technology. The one-time injection moulded with out any jointing makes the HDPE pipe fittings the most reliable solution for HDPE piping systems.",
     "HDPE pipe is made by extrusion moulding, which is different to HDPE pipe fittings."],
     features: [
       "Municipal water supply, gas supply and agriculture etc.",
@@ -629,6 +635,268 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
     }
   },
+  'socket-fusion-equal-coupling': {
+    description: [
+    "HDPE socket fusion equal coupling, we also called HDPE socket coupler,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-reducing-coupler': {
+    description: [
+    "HDPE reducer is commonly used for the connection of two different diameter pipelines, by reduce the pipe size from a larger diameter to a smaller diameter. Alternatively, reducer may refer to any fitting which causes a change in pipe diameter. This change may be intended to meet hydraulic flow requirements of the system or adapt to existing piping of a different size."],
+    features: [
+      "Municipal water supply, gas supply and agriculture etc.",
+      "Commercial & Residential water supply",
+      "Industrial liquids transportation",
+      "Sewage treatment",
+      "Food and chemical industry",
+      "Replacement of cement pipes and steel pipes",
+      "Argillaceous silt, mud transportation",
+      "Garden green pipe networks"
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn25*20mm-dn110*90mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-equal-tee': {
+    description: [
+    "HDPE socket fusion equal tee, we also called socket tee ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-reducing-tee': {
+    description: [
+    "HDPE socket fusion reducing tee, we also called socket reducing tee ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn25*20mm-dn110*90mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-90-degree-elbow': {
+    description: [
+    "HDPE socket fusion 90° elbow, we also called socket elbow or bend ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-45-degree-elbow': {
+    description: [
+    "HDPE socket fusion 45° elbow, we also called socket elbow or bend ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-end-cap': {
+    description: [
+    "HDPE socket fusion end cap, we also called socket pipe end ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'socket-fusion-flange': {
+    description: [
+    "HDPE socket fusion flange, we also called socket pipe stub end or stub flange ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+      "We can provide full range of socket fusion fitting from dn20mm to 110mm, including coupling, elbow, tee flange and so on. HDPE pipe has been widely used in various fields,such as water plumbing & sewerage system, gas distribution, slurry transfer lines, rural irrigation, fire system supply lines, electrical and communications conduit.,etc."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn50mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-female-coupling': {
+    description: [
+    "HDPE socket fusion thread female coupling, we also called female coupler  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20*1/2F-dn110*4F (inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-male-coupling': {
+    description: [
+    "HDPE socket fusion thread male coupling, we also called male coupler  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20*1/2F-dn110*4F (inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-female-elbow': {
+    description: [
+    "HDPE socket fusion thread female elbow, we also called female elbow, Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20*1/2F-dn63*4F (inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-male-elbow': {
+    description: [
+    "HDPE socket fusion thread male elbow, we also called male elbow  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20*1/2F-dn63*2F (inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-female-tee': {
+    description: [
+    "HDPE socket fusion thread female tee, we also called female tee  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20*1/2F-dn63*2F (inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-male-union-coupling': {
+    description: [
+    "HDPE socket fusion copper thread male coupling, we also called male coupler  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 63mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'φ20*1/2M-φ63*2M (inner diameter)',
+      pressure: 'SDR11 PN16 SDR13.6 PN12.5',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'thread-female-union-coupling': {
+    description: [
+    "HDPE socket fusion copper thread female coupling, we also called female coupler  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 63mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    features: [
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'φ20*1/2F-φ63*2F (inner diameter)',
+      pressure: 'SDR11 PN16 SDR13.6 PN12.5',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'valve-for-irrigation-pipe': {
+    description: [
+    "The stop valve is very suitable for shutting off or regulating and throttling water. The most obvious advantage of the stop valve is that during the opening and closing process, the friction between the disc and the sealing surface of the valve body is smaller, so it is wear-resistant."],
+    features: [
+    "The stop valve used on HDPE pipe line, such as home water systerm, irrigation systerm."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR11 PN16',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
+  'valve-for-water-supply': {
+    description: [
+    "The ball valve is not only simple in structure, good in sealing performance, but also small in size, light in weight, low in material consumption, small in installation size, and small in driving torque within a certain nominal passage range. It is simple to operate and easy to achieve rapid opening and closing. One of the fastest growing valve varieties in more than ten years."],
+    features: [
+    "With the technological advancement of ball valves, in a foreseeable short period of time, there will be more extensive applications in oil and gas pipelines, oil refining and cracking units, and the nuclear industry. In addition, ball valves will also become one of the leading valve types in large and medium-sized calibers and low- and medium-pressure fields in other industries."
+    ],
+    specifications: {
+      material: '100% virgin raw material',
+      size: 'dn20mm-dn110mm(inner diameter)',
+      pressure: 'SDR17 PN10',
+      service_life: '50 years for normal use',
+      delivery_time: 'Stock available for regular sizes',
+      production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
+    }
+  },
 };
 
 const ProductDetail = () => {
@@ -671,12 +939,8 @@ const ProductDetail = () => {
       'ef-reducing-tee': efreducingTeeImage,
       'ef-reducer': efReducerImage,
       'ef-stub-end': efStubEndImage,
-      // 'ef-female-thread': efFemaleThreadImage,
-      // 'ef-male-thread': efMaleThreadImage,
-      // 'ef-cross-tee': efCrossTeeImage,
 
       'butt-fusion-end-cap': bfEndCapImage,
-      // 'bf-22-5-elbow': bf225ElbowImage,
       'butt-fusion-45elbow': bf45ElbowImage,
       'butt-fusion-90elbow': bf90ElbowImage,
       'butt-fusion-flange': bfFlangeImage,
@@ -684,6 +948,23 @@ const ProductDetail = () => {
       'butt-fusion-reducing-tee': bfReducingTeeImage,
       'butt-fusion-reducing-coupler': bfReducingCouplingImage,
       'butt-fusion-reducing-cross': bfReducingCrossImage,
+      'socket-fusion-equal-coupling': socketFusionEqualCouplingImage,
+      'socket-fusion-reducing-coupler': socketFusionEqualCouplerImage,
+      'socket-fusion-equal-tee': socketFusionEqualCouplerTeeImage,
+      'socket-fusion-reducing-tee': socketFusionReducingTeeImage,
+      'socket-fusion-90-degree-elbow': socketFusion90DegreeImage,
+      'socket-fusion-45-degree-elbow': socketFusion45DegreeImage,
+      'socket-fusion-end-cap': socketFusionEndCapImage,
+      'socket-fusion-flange': socketFusionFlangeImage,
+      'thread-female-coupling': ThreadFittingFemaleCouplingImage,
+      'thread-male-coupling': ThreadFittingMaleCouplingImage,
+      'thread-female-elbow': ThreadFittingFemaleElbowImage,
+      'thread-male-elbow': ThreadFittingMaleElbowImage,
+      'thread-female-tee': ThreadFittingFemaleTeeImage,
+      'thread-male-union-coupling': ThreadFittingUnionMaleImage,
+      'thread-female-union-coupling': ThreadFittingUnionFemaleImage,
+      'valve-for-irrigation-pipe': valveIrrigationPipeImage,
+      'valve-for-water-supply': valveWaterSupplyPipeImage,
     };
 
     // If there's a specific product image, return it

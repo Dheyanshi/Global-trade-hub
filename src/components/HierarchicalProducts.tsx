@@ -106,7 +106,7 @@ const productData: ProductCategory[] = [
         name: "Butt Fusion Fitting",
         image: buttFusionFittingsImage,
         items: [
-          "Butt Fusion End Cap", "Butt Fusion 22.5°Elbow", "Butt Fusion 45°Elbow", 
+          "Butt Fusion End Cap", "Butt Fusion 45°Elbow", 
           "Butt Fusion 90°Elbow", "Butt Fusion Flange", "Butt Fusion Equal Tee", 
           "Butt Fusion Reducing Tee", "Butt Fusion Reducing Coupler", "Butt Fusion Reducing Cross"
         ]
@@ -135,42 +135,6 @@ const productData: ProductCategory[] = [
         items: [
           "Valve For Irrigation Pipe", "Valve For Water Supply"
         ]
-      }
-    ]
-  },
-  {
-    id: "hdpe-valves",
-    name: "HDPE Valves",
-    icon: Settings,
-    image: hdpeValvesImage,
-    subcategories: [
-      {
-        name: "Stop Valve",
-        image: hdpeBallValveImage
-      },
-      {
-        name: "Ball Valve",
-        image: hdpeBallValveImage
-      }
-    ]
-  },
-  {
-    id: "tools",
-    name: "Industrial Tools",
-    icon: Wrench,
-    image: toolsImage,
-    subcategories: [
-      {
-        name: "Customised Tool Kits",
-        image: customizedToolkitsImage
-      },
-      {
-        name: "Insulated Tools",
-        image: insulatedToolsImage
-      },
-      {
-        name: "Non Sparking Tools",
-        image: nonSparkingToolsImage
       }
     ]
   }

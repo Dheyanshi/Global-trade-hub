@@ -62,7 +62,7 @@ const ProductNavigation = () => {
         {
           name: "Butt Fusion Fitting",
           items: [
-            "Butt Fusion End Cap", "Butt Fusion 22.5°Elbow", "Butt Fusion 45°Elbow", 
+            "Butt Fusion End Cap", "Butt Fusion 45°Elbow", 
             "Butt Fusion 90°Elbow", "Butt Fusion Flange", "Butt Fusion Equal Tee", 
             "Butt Fusion Reducing Tee", "Butt Fusion Reducing Coupler", "Butt Fusion Reducing Cross"
           ]
@@ -91,40 +91,6 @@ const ProductNavigation = () => {
       }
       ]
     },
-    {
-      id: "hdpe-valves",
-      name: "HDPE Valves",
-      icon: Settings,
-      subcategories: [
-        {
-          name: "Stop Valve",
-          items: []
-        },
-        {
-          name: "Ball Valve",
-          items: []
-        }
-      ]
-    },
-    {
-      id: "tools",
-      name: "Industrial Tools",
-      icon: Wrench,
-      subcategories: [
-        {
-          name: "Customised Tool Kits",
-          items: []
-        },
-        {
-          name: "Insulated Tools",
-          items: []
-        },
-        {
-          name: "Non Sparking Tools",
-          items: []
-        }
-      ]
-    }
   ];
 
   const toggleCategory = (categoryId: string) => {
