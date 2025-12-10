@@ -118,6 +118,8 @@ const productNameMap: { [key: string]: string } = {
   'ef-cross-tee': 'EF Cross Tee',
   'butt-fusion-45elbow': 'Butt Fusion 45 Degree Elbow',
   'butt-fusion-90elbow': 'Butt Fusion 90 Degree Elbow',
+  'hot-melt-stop-valve-for-irrigation-pipe': 'Hot Melt Stop Valve For Irrigation Pipe',
+  'hot-melt-ball-valve-for-water-supply': 'Hot Melt Ball Valve For Water Supply'
 };
 
 // Add this const before the ProductDetail component
@@ -815,7 +817,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
     ],
     specifications: {
       material: '100% virgin raw material',
-      size: 'dn20*1/2F-dn63*2F (inner diameter)',
+      size: 'dn20*1/2M - dn63*2M (inner diameter), dn20mm to 63 mm',
       pressure: 'SDR11 PN16',
       service_life: '50 years for normal use',
       delivery_time: 'Stock available for regular sizes',
@@ -867,7 +869,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
     }
   },
-  'valve-for-irrigation-pipe': {
+  'hot-melt-stop-valve-for-irrigation-pipe': {
     description: [
     "The stop valve is very suitable for shutting off or regulating and throttling water. The most obvious advantage of the stop valve is that during the opening and closing process, the friction between the disc and the sealing surface of the valve body is smaller, so it is wear-resistant."],
     features: [
@@ -882,7 +884,7 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
       production_lead_time : '7-10 days for a 20ft container, 10-15 days for a 40ft container.'
     }
   },
-  'valve-for-water-supply': {
+  'hot-melt-ball-valve-for-water-supply': {
     description: [
     "The ball valve is not only simple in structure, good in sealing performance, but also small in size, light in weight, low in material consumption, small in installation size, and small in driving torque within a certain nominal passage range. It is simple to operate and easy to achieve rapid opening and closing. One of the fastest growing valve varieties in more than ten years."],
     features: [
@@ -963,8 +965,8 @@ const ProductDetail = () => {
       'thread-female-tee': ThreadFittingFemaleTeeImage,
       'thread-male-union-coupling': ThreadFittingUnionMaleImage,
       'thread-female-union-coupling': ThreadFittingUnionFemaleImage,
-      'valve-for-irrigation-pipe': valveIrrigationPipeImage,
-      'valve-for-water-supply': valveWaterSupplyPipeImage,
+      'hot-melt-stop-valve-for-irrigation-pipe': valveIrrigationPipeImage,
+      'hot-melt-ball-valve-for-water-supply': valveWaterSupplyPipeImage,
     };
 
     // If there's a specific product image, return it
@@ -1222,11 +1224,11 @@ const slugToText = (slug: string) => {
 
               {/* Action Buttons */}
               <div className="flex flex-col gap-3">
-                <Button size="lg" className="w-full">
+                <Button size="lg" className="w-full" disabled>
                   <Mail className="h-4 w-4 mr-2" />
                   Request Quote
-                </Button>
-                <Button variant="outline" size="lg" className="w-full">
+                </Button>   
+                <Button variant="outline" size="lg" className="w-full" disabled>
                   <Phone className="h-4 w-4 mr-2" />
                   Contact Sales
                 </Button>

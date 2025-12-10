@@ -99,7 +99,7 @@ const productData: ProductCategory[] = [
         items: [
           "EF Equal Coupler", "EF End Cap", "EF 45°Elbow", "EF 90°Elbow", 
           "EF Equal Tee", "EF Reducing Tee", "EF Reducer", "EF Stub End", 
-          "EF Female Thread Coupler", "EF Male Thread Coupler", "EF Cross Tee"
+          // "EF Female Thread Coupler", "EF Male Thread Coupler", "EF Cross Tee"
         ]
       },
       {
@@ -133,7 +133,7 @@ const productData: ProductCategory[] = [
         name: "Valves",
         image: buttFusionFittingsImage,
         items: [
-          "Valve For Irrigation Pipe", "Valve For Water Supply"
+          "Hot Melt Stop Valve For Irrigation Pipe", "Hot Melt Ball Valve For Water Supply"
         ]
       }
     ]

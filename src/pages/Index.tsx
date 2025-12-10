@@ -230,22 +230,22 @@ const products = [
     ],
     link: "https://www.gh-pe.com/",
   },
-  {
-    name: "Industrial Safety Tools",
-    partner: "Bombay Tools",
-    images: [insulatedTools, nonSparkingTools, customizedToolkits],
-    badge: { text: "Partner Product", color: "bg-orange-600" },
-    description: "Professional-grade industrial tools designed for safety in hazardous environments. Trusted by leading industries including IOCL, BPCL, HPCL, GAIL, and Reliance for their reliability and precision.",
-    industryFocus: "Safety First",
-    applications: "Hazardous Zones",
-    features: [
-      "Customized Tool Kits",
-      "Insulated Tools for electrical safety",
-      "Non Sparking Tools for ATEX zones",
-      "Industrial safety equipment",
-    ],
-    link: "https://thebombaytools.com/",
-  }
+  // {
+  //   name: "Industrial Safety Tools",
+  //   partner: "Bombay Tools",
+  //   images: [insulatedTools, nonSparkingTools, customizedToolkits],
+  //   badge: { text: "Partner Product", color: "bg-orange-600" },
+  //   description: "Professional-grade industrial tools designed for safety in hazardous environments. Trusted by leading industries including IOCL, BPCL, HPCL, GAIL, and Reliance for their reliability and precision.",
+  //   industryFocus: "Safety First",
+  //   applications: "Hazardous Zones",
+  //   features: [
+  //     "Customized Tool Kits",
+  //     "Insulated Tools for electrical safety",
+  //     "Non Sparking Tools for ATEX zones",
+  //     "Industrial safety equipment",
+  //   ],
+  //   link: "https://thebombaytools.com/",
+  // }
 ];
   return (
     <div className="min-h-screen">
@@ -535,11 +535,11 @@ const products = [
             ]}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 flex justify-center">
               {products.map((product, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/3 shrink-0"
                 >
                   <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden">
                     <div className="relative">
