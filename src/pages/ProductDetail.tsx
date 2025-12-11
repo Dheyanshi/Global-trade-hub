@@ -811,13 +811,13 @@ const productDetailsMap: { [key: string]: ProductDetails } = {
   },
   'thread-male-elbow': {
     description: [
-    "HDPE socket fusion thread male elbow, we also called male elbow  ,Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 110mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
+    "HDPE socket fusion thread male elbow, we also called male elbow, Socket PE pipe fittings are mainly used for small-caliber PE water supply pipes, range from dn20mm to 63mm. The diameter of PE socket pipe fittings is slightly larger than that of PE pipe. After the PE pipe is hot-melted, insert the PE pipe into the PE fitting to complete the hot-melt connection."],
     features: [
-    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection.   The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
+    "How do you connect HDPE pipes to the other pipe, such as PVC pipe, steel pipe? When HDPE pipe be connected to the PVC pipe or steel pipe, since they are not made by HDPE material, so hot-melt welding is not available for connection. The only possible method to connect HDPE pipe to PVC pipe is by mechanical connection, using flanges or use transition fittings,like female or male thread adaptor fittings."
     ],
     specifications: {
       material: '100% virgin raw material',
-      size: 'dn20*1/2M - dn63*2M (inner diameter), dn20mm to 63 mm',
+      size: 'dn20*1/2M - dn63*2M (inner diameter)',
       pressure: 'SDR11 PN16',
       service_life: '50 years for normal use',
       delivery_time: 'Stock available for regular sizes',
@@ -1223,16 +1223,16 @@ const slugToText = (slug: string) => {
               
 
               {/* Action Buttons */}
-              <div className="flex flex-col gap-3">
-                <Button size="lg" className="w-full" disabled>
+              {/* <div className="flex flex-col gap-3">
+                <Button size="lg" className="w-full">
                   <Mail className="h-4 w-4 mr-2" />
                   Request Quote
                 </Button>   
-                <Button variant="outline" size="lg" className="w-full" disabled>
+                <Button variant="outline" size="lg" className="w-full">
                   <Phone className="h-4 w-4 mr-2" />
                   Contact Sales
                 </Button>
-              </div>
+              </div> */}
 
               {/* Trust Indicators */}
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/30">

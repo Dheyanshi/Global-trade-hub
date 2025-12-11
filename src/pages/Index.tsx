@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Moon, Sun, Globe, Shield, Users, Award, Phone, Mail, MapPin, Menu, X, ChevronDown, Factory, Zap, Truck, Building, Star, Quote, Wrench, Cog, Settings, ArrowRight, ExternalLink, Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ProductNavigation from '@/components/ProductNavigation';
@@ -19,14 +19,48 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import emailjs from "@emailjs/browser";
 
 const Index = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    const formData = new FormData(formRef.current);
+
+    const firstName = formData.get("firstName") as string;
+    const lastName = formData.get("lastName") as string;
+
+    // Combine into full name
+    const fullName = `${firstName} ${lastName}`;
+
+    // Send email using custom data
+    emailjs
+      .send(
+         "service_qfmzt4e",  //service ID
+        "template_h3xfkan", // Template ID
+        {
+          name: fullName,
+          email: formData.get("email"),
+          company: formData.get("company"),
+          message: formData.get("message"),
+        },
+        "uO_pmxD3Mc1k9JV5G"   // Public Key
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          formRef.current?.reset();
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error);
+        }
+      );
   };
 
   const stats = [
@@ -404,14 +438,14 @@ const products = [
                     DHEYANSHI INTERNATIONAL LLP - Your trusted partner in mechanical and electrical equipment trading across China, Africa, Europe, USA, and beyond.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                     Explore Our Services
                   </Button>
                   <Button variant="outline" size="lg" className="text-lg px-8 border-blue-200 hover:bg-blue-50">
                     View Global Reach
                   </Button>
-                </div>
+                </div> */}
               </div>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-3xl"></div>
@@ -1047,7 +1081,7 @@ const products = [
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
+                  <h3 className="text-xl font-semibold mb-4">Business Hours (IST)</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <div>Monday to Friday : 11:00 AM to 8:00 PM</div>
                     <div>Saturday: 11:00 AM to 4:30 PM</div>
@@ -1063,35 +1097,17 @@ const products = [
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-4">
+                  <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
-                      <input 
-                        type="text" 
-                        placeholder="First Name" 
-                        className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                      />
-                      <input 
-                        type="text" 
-                        placeholder="Last Name" 
-                        className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                      />
+                     <div className="grid grid-cols-2 gap-4">
+                      <input name="firstName" placeholder="First Name" className="w-full p-3 border rounded-lg" required />
+                      <input name="lastName" placeholder="Last Name" className="w-full p-3 border rounded-lg" required />
                     </div>
-                    <input 
-                      type="email" 
-                      placeholder="Email Address" 
-                      className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                    />
-                    <input 
-                      type="text" 
-                      placeholder="Company Name" 
-                      className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                    />
-                    <textarea 
-                      placeholder="Message" 
-                      rows={4} 
-                      className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                    ></textarea>
-                    <Button className="w-full" size="lg">
+                    </div>
+                    <input name="email" type="email" placeholder="Email Address" className="w-full p-3 border rounded-lg" required />
+                    <input name="company" placeholder="Company Name" className="w-full p-3 border rounded-lg" />
+                    <textarea name="message" placeholder="Message" rows={4} className="w-full p-3 border rounded-lg" required />
+                    <Button className="w-full" size="lg" type='submit'>
                       Send Message
                     </Button>
                   </form>
